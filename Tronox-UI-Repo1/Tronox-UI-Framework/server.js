@@ -20,16 +20,14 @@ if (!fs.existsSync(DOCUMENTS_FOLDER)) {
 }
 // Serve documents folder for downloads
 app.use("/documents", express.static(DOCUMENTS_FOLDER));
-app.use(cors());
-app.use(bodyParser.json());
-// Fix __dirname in ES Module
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 app.use(cors({
   origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
+app.use(bodyParser.json());
+// Fix __dirname in ES Module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Serve static files from "public" folder
 app.use(express.static(path.join(__dirname, "public")));
