@@ -65,7 +65,23 @@ function verifyToken(req, res, next) {
     res.status(403).json({ message: "Token required" });
   }
 }
+// Route to trigger the test case
+app.get("/run-test-script", (req, res) => {
+  console.log("Received request to run test...");
 
+  // Replace `npm run wdio` with your actual test command
+  exec("npx wdio", (error, stdout, stderr) => {
+      if (error) {
+          console.error(`Error executing test: ${error.message}`);
+          res.status(500).send(`Error: ${error.message}`);
+          return;
+      }
+      if (stderr) {
+          console.error(`Test stderr: ${stderr}`);
+      }
+      res.send(`<pre>${stdout || stderr}</pre>`);
+  });
+});
 function runScript(req, res) {
   exec("npm run wdio", (error, stdout, stderr) => {
     if (error) {
