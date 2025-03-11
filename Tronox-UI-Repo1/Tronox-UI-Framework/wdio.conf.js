@@ -10,8 +10,7 @@ export const config = {
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
-    runner: 'local',
-    hostname: '34.100.220.123',
+    runner: 'local'
     //
     // ==================
     // Specify Test Files
@@ -62,8 +61,7 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'MicrosoftEdge',
-        platformName: 'Ubuntu',
+        browserName: 'MicrosoftEdge'
     }],
 
     //
