@@ -26,6 +26,12 @@ app.use(bodyParser.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+app.use(cors({
+    origin: '*', // Allow all origins (Change to specific domain if needed)
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
+}));
+
 // Serve static files from "public" folder
 app.use(express.static(path.join(__dirname, "public")));
 const upload = multer({ dest: "uploads/" });
