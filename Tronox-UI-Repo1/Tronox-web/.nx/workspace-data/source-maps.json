@@ -1,0 +1,568 @@
+{
+  "apps/Tronox-web": {
+    "root": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.index": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.polyfills": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.styles": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.scripts": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.budgets": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.outputHashing": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.buildOptimizer": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.optimization": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.vendorChunk": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.extractLicenses": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.sourceMap": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.namedChunks": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.options": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.options.buildTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.buildTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.spa": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.dependsOn": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.options": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.defaultConfiguration": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.options.outputPath": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.options.main": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.options.tsConfig": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.production": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.production.outputHashing": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.development": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.development.buildOptimizer": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.development.optimization": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.development.sourceMap": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.development.extractLicenses": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.server.configurations.development.vendorChunk": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.configurations": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.defaultConfiguration": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.configurations.development": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.configurations.development.browserTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.configurations.development.serverTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.configurations.production": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.configurations.production.browserTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-ssr.configurations.production.serverTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.executor": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.options": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.configurations": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.defaultConfiguration": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.options.routes": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.configurations.development": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.configurations.development.browserTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.configurations.development.serverTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.configurations.production": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.configurations.production.browserTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prerender.configurations.production.serverTarget": [
+      "apps/Tronox-web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.ci": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.configurations.ci.codeCoverage": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.test.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.server.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.server.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "libs/shared/ui-library": {
+    "root": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.styles": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "libs/shared/ui-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "libs/shared/util-library": {
+    "root": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "libs/shared/util-library/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.cache": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.inputs": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  }
+}

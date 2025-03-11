@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDIO Test Runner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        iframe {
+            width: 80%;
+            height: 600px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Run WDIO Test</h1>
+    <button onclick="runTest()">Run Test</button>
+
+    <div id="iframeContainer" style="display: none;">
+        <h2>Test Output</h2>
+        <iframe id="testIframe"></iframe>
+    </div>
+
+    <script>
+        function runTest() {
+            fetch('/run-test')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('testIframe').src = data.url;
+                    document.getElementById('iframeContainer').style.display = "block";
+                })
+                .catch(error => console.error("Error running test:", error));
+        }
+    </script>
+
+</body>
+</html>

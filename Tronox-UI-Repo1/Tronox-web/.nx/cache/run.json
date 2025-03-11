@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run Tronox-web:serve",
+    "startTime": "2025-02-16T16:07:21.891Z",
+    "endTime": "2025-02-16T17:35:52.004Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "Tronox-web:serve:development",
+      "target": "serve",
+      "projectName": "Tronox-web",
+      "hash": "6800349083555621047",
+      "startTime": "2025-02-16T16:07:22.317Z",
+      "endTime": "2025-02-16T17:35:51.972Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

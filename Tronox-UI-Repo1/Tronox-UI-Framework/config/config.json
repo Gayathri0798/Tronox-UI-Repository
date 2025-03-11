@@ -1,0 +1,28 @@
+{
+    "flipkart": {
+        "baseUrl": "https://www.flipkart.com/",
+        "appName": "flipkart",
+        "appNamespec": "flipkart.e2e"
+    },"Jamaica": {
+        "baseUrl": "https://flstg.discoverflow.lla.digital/jamaica",
+        "appName": "Jamaica",
+        "appNamespec": "Jamaica.e2e"
+    },"Tronox": {
+        "baseUrl": "https://tronox.okta.com/",
+        "appName": "Tronox",
+        "appNamespec": "TronoxDTS.e2e"
+    },"Tronox": {
+        "baseUrl": "https://tronox.okta.com/",
+        "appName": "Tronox",
+        "appNamespec": "TronoxFTM.e2e"
+    },"Tronox": {
+        "baseUrl": "https://tronox.okta.com/",
+        "appName": "Tronox",
+        "appNamespec": "TronoxSTP.e2e"
+    },"Tronox": {
+        "baseUrl": "https://tronox.okta.com/",
+        "appName": "Tronox",
+        "appNamespec": "Tronox_MTS.e2e"
+    }
+    
+}

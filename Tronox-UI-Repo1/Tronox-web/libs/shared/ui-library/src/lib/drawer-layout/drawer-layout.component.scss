@@ -1,0 +1,123 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.full-page-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.drawer {
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.drawer-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.left-drawer {
+  background-color: rgb(198, 227, 253) !important;
+  border: 0.1px solid rgb(218, 210, 210);
+}
+
+.right-drawer {
+  background-color: white !important;
+  border: 0.1px solid rgb(218, 210, 210);
+}
+
+.mat-drawer-inner-container {
+  background-color: aliceblue;
+}
+
+.grid-container {
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.drawer-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #0f216d !important;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.menu-item mat-icon {
+  font-size: 22px;
+  color: #0f216d;
+  margin-right: 12px;
+}
+
+.menu-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+}
+
+.submenu {
+  padding-left: 32px; /* Indent submenu items slightly more for a cleaner effect */
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #0f216d;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submenu-item mat-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #0f216d;
+}
+
+.submenu-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+}

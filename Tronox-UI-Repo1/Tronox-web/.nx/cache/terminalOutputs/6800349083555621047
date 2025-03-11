@@ -1,0 +1,1199 @@
+- Generating browser application bundles (phase: setup)...
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m[39m
+[37m[0m[1mInitial chunk files[22m  [2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[0m[39m
+[37m[0m[32mvendor.js[39m[37m            [2m | [22m[2mvendor[22m       [2m | [22m  [36m4.97 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mpolyfills.js[39m[37m         [2m | [22m[2mpolyfills[22m    [2m | [22m[36m236.44 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mstyles.css, styles.js[39m[37m[2m | [22m[2mstyles[22m       [2m | [22m[36m212.16 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mmain.js[39m[37m              [2m | [22m[2mmain[22m         [2m | [22m[36m140.54 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mruntime.js[39m[37m           [2m | [22m[2mruntime[22m      [2m | [22m  [36m6.65 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1m [22m                    [2m | [22m[1mInitial total[22m[2m | [22m  [1m5.56 MB[22m[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2025-02-16T16:07:31.240Z[39m[37m[22m - Hash: [1m[37mce590a660f17a5f8[39m[37m[22m - Time: [1m[37m4640[39m[37m[22mms[0m[39m
+[37m[39m
+[37m** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[39m
+[37m[39m
+[37m[39m
+[37m[92m√[39m[37m Compiled successfully.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m[39m
+[37m[0m[1mInitial chunk files[22m[2m | [22m[1mNames[22m  [2m | [22m[1mRaw size[22m[0m[39m
+[37m[0m[32mvendor.js[39m[37m          [2m | [22m[2mvendor[22m [2m | [22m [36m1.69 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mmain.js[39m[37m            [2m | [22m[2mmain[22m   [2m | [22m[36m60.99 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mruntime.js[39m[37m         [2m | [22m[2mruntime[22m[2m | [22m [36m6.65 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m2 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2025-02-16T17:35:33.770Z[39m[37m[22m - Hash: [1m[37m02b52f06ba03d3f4[39m[37m[22m - Time: [1m[37m4455[39m[37m[22mms[0m[39m
+[37m[39m
+[37m[91m×[39m[37m Failed to compile.[39m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/Tronox-web/src/app/app.component.ts[39m[31m[0m:[0m[93m2:0-36[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\apps\Tronox-web\src\app'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/Tronox-web/src/app/app.config.ts[39m[31m[0m:[0m[93m1:0-59[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\apps\Tronox-web\src\app'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/Tronox-web/src/app/app.config.ts[39m[31m[0m:[0m[93m5:0-57[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common/http' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\apps\Tronox-web\src\app'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[39m[31m[0m:[0m[93m3:0-49[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\drawer-layout'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[39m[31m[0m:[0m[93m4:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\drawer-layout'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[39m[31m[0m:[0m[93m7:0-70[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/cdk/layout' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\drawer-layout'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/login/login.component.ts[39m[31m[0m:[0m[93m2:0-42[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\login'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/login/login.component.ts[39m[31m[0m:[0m[93m3:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't re[39m[22m[1m[31msolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\login'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/login/login.component.ts[39m[31m[0m:[0m[93m10:0-45[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/forms' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\login'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[39m[31m[0m:[0m[93m2:0-50[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\test-result-dialog'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[39m[31m[0m:[0m[93m3:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\test-result-dialog'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[39m[31m[0m:[0m[93m2:0-81[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\tile-dialog-box'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[39m[31m[0m:[0m[93m3:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\tile-dialog-box'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[39m[31m[0m:[0m[93m2:0-49[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\tile-layout'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[39m[31m[0m:[0m[93m3:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found[39m[22m[1m[31m: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\tile-layout'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[39m[31m[0m:[0m[93m2:0-57[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\tile-view'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[39m[31m[0m:[0m[93m4:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\tile-view'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[39m[31m[0m:[0m[93m2:0-49[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\toolbar'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[39m[31m[0m:[0m[93m3:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\toolbar'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[39m[31m[0m:[0m[93m8:0-45[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/forms' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\toolbar'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[39m[31m[0m:[0m[93m2:0-42[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\ui-library\src\lib\ui-library'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[39m[31m[0m:[0m[93m3:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-w[39m[22m[1m[31meb\libs\shared\ui-library\src\lib\ui-library'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/util-library/src/lib/guards/auth.guard.ts[39m[31m[0m:[0m[93m2:0-39[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\util-library\src\lib\guards'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/util-library/src/lib/services/auth.service.ts[39m[31m[0m:[0m[93m1:0-50[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common/http' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\util-library\src\lib\services'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/util-library/src/lib/services/auth.service.ts[39m[31m[0m:[0m[93m4:0-36[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\util-library\src\lib\services'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/util-library/src/lib/services/tile.service.ts[39m[31m[0m:[0m[93m1:0-63[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common/http' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\util-library\src\lib\services'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/util-library/src/lib/services/tile.service.ts[39m[31m[0m:[0m[93m4:0-36[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\util-library\src\lib\services'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/util-library/src/lib/util-library/util-library.component.ts[39m[31m[0m:[0m[93m2:0-42[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/core' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\util-library\src\lib\util-library'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./libs/shared/util-library/src/lib/util-library/util-library.component.ts[39m[31m[0m:[0m[93m3:0-47[39m[31m[0m - [0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve '@angular/common' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web\libs\shared\util-library\src\lib\util-library'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_m[39m[22m[1m[31modules/@angular/animations/fesm2022/animations.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\animations\fesm2022\animations.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/a11y.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\a11y.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/bidi.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\bidi.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/coercion.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\coercion.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/collections.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\collections.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/dialog.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\dialog.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/keycodes.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file[39m[22m[1m[31m or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\keycodes.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/observers.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\observers.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/observers/private.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\observers\private.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/overlay.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\overlay.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/platform.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\platform.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/portal.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\portal.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/private.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\private.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/scrolling.mjs[3[39m[22m[1m[31m9m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\scrolling.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/table.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\table.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/cdk/fesm2022/text-field.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\cdk\fesm2022\text-field.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/common/fesm2022/common.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\common\fesm2022\common.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/common/fesm2022/http.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\common\fesm2022\http.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/core/fesm2022/core.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\core\fesm2022\core.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/@angular/forms/fesm2022/forms.mjs[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-we[39m[22m[1m[31mb\node_modules\@angular\forms\fesm2022\forms.mjs'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/Tronox-web/src/app/app.config.ts[0m:[93m8[0m:[93m35[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m import { provideHttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                  ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m5[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/cdk/layout' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m5[0m import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';[39m[22m
+[1m[31m[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m22[0m - [91merror[0m[90m NG2003: [0mNo suitable injection token for parameter 'breakpointObserver' of class 'DrawerLayoutComponent'.[39m[22m
+[1m[31m  Consider using the @Inject decorator to specify an injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m[7m  [0m [91m                     ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m42[0m[39m[22m
+[1m[31m    [7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m    [7m  [0m [96m                                         ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    This type does not have a value, so it cannot be u[39m[22m[1m[31msed as injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m42[0m:[93m19[0m - [91merror[0m[90m TS7006: [0mParameter 'result' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m42[0m       .subscribe((result) => {[39m[22m
+[1m[31m[7m  [0m [91m                  ~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormsModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 13[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 14[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     FormsModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialog[39m[22m[1m[31mModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m13[0m   imports: [CommonModule, MatDialogModule],[39m[22m
+[1m[31m[7m  [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m9[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m30[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogTitle, MatDialogContent, MatDialogClose, MatButtonModule, MatDialogModule, MatProgressSpinnerModule, MatFormFieldModule, MatIconModule, MatTableModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 30[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 31[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 40[0m     MatTableModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 41[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m8[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatGridListModule, TileViewComponent]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m   imports: [CommonModule, MatGridListModule, TileViewCompo[39m[22m[1m[31mnent],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m3[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m3[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m9[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatDialogModule, MatIconModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m   imports: [CommonModule, MatCardModule, MatDialogModule, MatIconModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m12[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatToolbarModule, MatFormFieldModule, MatInputModule, MatIconModule, FormsModule, MatMenuModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 12[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 13[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     MatMenuModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[39m[22m[1m[31m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m7[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatButtonModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m7[0m   imports: [CommonModule, MatButtonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/auth.service.ts[0m:[93m2[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { HttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m1[0m:[93m41[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m import { HttpClient, HttpHeaders } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                        ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m55[0m:[93m31[0m - [91merror[0m[90m TS7006: [0mParameter 'key' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m55[0m       headers.keys().forEach((key) => {[39m[22m
+[1m[31m[7m  [0m [91m                              ~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCan[39m[22m[1m[31mnot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m6[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable)]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m6[0m   imports: [CommonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m[39m
+[37m[0m[1mInitial chunk files[22m[2m | [22m[1mNames[22m  [2m | [22m [1mRaw size[22m[0m[39m
+[37m[0m[32mvendor.js[39m[37m          [2m | [22m[2mvendor[22m [2m | [22m[36m119.61 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mruntime.js[39m[37m         [2m | [22m[2mruntime[22m[2m | [22m  [36m6.65 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mmain.js[39m[37m            [2m | [22m[2mmain[22m   [2m | [22m[36m418 bytes[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m2 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2025-02-16T17:35:38.730Z[39m[37m[22m - Hash: [1m[37mb02f88639961395d[39m[37m[22m - Time: [1m[37m546[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@ngtools\webpack\src\ivy\index.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/Tronox-web/src/app/app.config.ts[0m:[93m8[0m:[93m35[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m import { provideHttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                  ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m5[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/cdk/layout' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m5[0m import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';[39m[22m
+[1m[31m[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m22[0m - [91merror[0m[90m NG2003: [0mNo suitable injection token for parameter 'breakpointObserver' of class 'DrawerLayoutComponent'.[39m[22m
+[1m[31m  Consider using the @Inject decorator to specify an injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m[7m  [0m [91m                     ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m42[0m[39m[22m
+[1m[31m    [7m31[0m     private readonly breakpointObserver: BreakpointObserve[39m[22m[1m[31mr,[39m[22m
+[1m[31m    [7m  [0m [96m                                         ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    This type does not have a value, so it cannot be used as injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m42[0m:[93m19[0m - [91merror[0m[90m TS7006: [0mParameter 'result' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m42[0m       .subscribe((result) => {[39m[22m
+[1m[31m[7m  [0m [91m                  ~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormsModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 13[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 14[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     FormsModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG10[39m[22m[1m[31m10: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m13[0m   imports: [CommonModule, MatDialogModule],[39m[22m
+[1m[31m[7m  [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m9[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m30[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogTitle, MatDialogContent, MatDialogClose, MatButtonModule, MatDialogModule, MatProgressSpinnerModule, MatFormFieldModule, MatIconModule, MatTableModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 30[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 31[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 40[0m     MatTableModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 41[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m8[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type[39m[22m[1m[31m '[(not statically analyzable), MatGridListModule, TileViewComponent]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m   imports: [CommonModule, MatGridListModule, TileViewComponent],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m3[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m3[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m9[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatDialogModule, MatIconModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m   imports: [CommonModule, MatCardModule, MatDialogModule, MatIconModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m12[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatToolbarModule, MatFormFieldModule, MatInputModule, MatIconModule, FormsModule, MatMenuModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 12[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 13[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[[39m[22m[1m[31m7m 19[0m     MatMenuModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m7[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatButtonModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m7[0m   imports: [CommonModule, MatButtonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/auth.service.ts[0m:[93m2[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { HttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m1[0m:[93m41[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m import { HttpClient, HttpHeaders } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                        ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m55[0m:[93m31[0m - [91merror[0m[90m TS7006: [0mParameter 'key' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m55[0m       headers.keys().forEach((key) => {[39m[22m
+[1m[31m[7m  [0m [91m                              ~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[[39m[22m[1m[31m0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m6[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable)]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m6[0m   imports: [CommonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m×[39m[37m Failed to compile.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m[39m
+[37m[0m[1mInitial chunk files[22m  [2m | [22m[1mNames[22m    [2m | [22m [1mRaw size[22m[0m[39m
+[37m[0m[32mpolyfills.js[39m[37m         [2m | [22m[2mpolyfills[22m[2m | [22m[36m232.32 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mstyles.css, styles.js[39m[37m[2m | [22m[2mstyles[22m   [2m | [22m[36m208.03 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mvendor.js[39m[37m            [2m | [22m[2mvendor[22m   [2m | [22m[36m115.48 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[32mruntime.js[39m[37m           [2m | [22m[2mruntime[22m  [2m | [22m  [36m6.65 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m1 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2025-02-16T17:35:48.748Z[39m[37m[22m - Hash: [1m[37mf129617e9224dda1[39m[37m[22m - Time: [1m[37m1126[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./node_modules/ansi-html-community/index.js[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/source-map-loader/dist/cjs.js):[39m[22m
+[1m[31mError: ENOENT: no such file or directory, open 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\ansi-html-community\index.js'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@ngtools\webpack\src\ivy\index.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/Tronox-web/src/app/app.config.ts[0m:[93m8[0m:[93m35[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m import { provideHttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                  ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m5[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/cdk/layout' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m5[0m import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';[39m[22m
+[1m[31m[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m22[0m - [91merror[0m[90m NG2003: [0mNo suitable injection token for parameter 'breakpointObserver' of class 'DrawerLayoutComponent'.[39m[22m
+[1m[31m  Consider using the @Inject decorator to specify an injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m31[0m     private rea[39m[22m[1m[31mdonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m[7m  [0m [91m                     ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m42[0m[39m[22m
+[1m[31m    [7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m    [7m  [0m [96m                                         ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    This type does not have a value, so it cannot be used as injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m42[0m:[93m19[0m - [91merror[0m[90m TS7006: [0mParameter 'result' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m42[0m       .subscribe((result) => {[39m[22m
+[1m[31m[7m  [0m [91m                  ~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormsModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 13[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 14[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     FormsModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7[39m[22m[1m[31mm2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m13[0m   imports: [CommonModule, MatDialogModule],[39m[22m
+[1m[31m[7m  [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m9[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m30[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogTitle, MatDialogContent, MatDialogClose, MatButtonModule, MatDialogModule, MatProgressSpinnerModule, MatFormFieldModule, MatIconModule, MatTableModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 30[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 31[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 40[0m     MatTableModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 41[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                [39m[22m[1m[31m             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m8[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatGridListModule, TileViewComponent]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m   imports: [CommonModule, MatGridListModule, TileViewComponent],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m3[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m3[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m9[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatDialogModule, MatIconModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m   imports: [CommonModule, MatCardModule, MatDialogModule, MatIconModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m12[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value i[39m[22m[1m[31ms of type '[(not statically analyzable), MatToolbarModule, MatFormFieldModule, MatInputModule, MatIconModule, FormsModule, MatMenuModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 12[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 13[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     MatMenuModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m7[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatButtonModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m7[0m   imports: [CommonModule, MatButtonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/auth.service.ts[0m:[93m2[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { HttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m1[0m:[93m41[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m import { HttpClient, HttpHeaders } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                        ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/share[39m[22m[1m[31md/util-library/src/lib/services/tile.service.ts[0m:[93m55[0m:[93m31[0m - [91merror[0m[90m TS7006: [0mParameter 'key' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m55[0m       headers.keys().forEach((key) => {[39m[22m
+[1m[31m[7m  [0m [91m                              ~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m6[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable)]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m6[0m   imports: [CommonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m×[39m[37m Failed to compile.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[0m[39m
+[37m[0m1 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2025-02-16T17:35:50.168Z[39m[37m[22m - Hash: [1m[37m571cde7f89cea1e1[39m[37m[22m - Time: [1m[37m1271[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@ngtools\webpack\src\ivy\index.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\src\tools\babel\webpack-loader.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI[39m[22m[1m[31m-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\src\tools\babel\webpack-loader.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/Tronox-web/src/app/app.config.ts[0m:[93m8[0m:[93m35[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m import { provideHttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                  ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m5[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/cdk/layout' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m5[0m import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';[39m[22m
+[1m[31m[7m [0[39m[22m[1m[31mm [91m                                                ~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m22[0m - [91merror[0m[90m NG2003: [0mNo suitable injection token for parameter 'breakpointObserver' of class 'DrawerLayoutComponent'.[39m[22m
+[1m[31m  Consider using the @Inject decorator to specify an injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m[7m  [0m [91m                     ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m42[0m[39m[22m
+[1m[31m    [7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m    [7m  [0m [96m                                         ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    This type does not have a value, so it cannot be used as injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m42[0m:[93m19[0m - [91merror[0m[90m TS7006: [0mParameter 'result' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m42[0m       .subscribe((result) => {[39m[22m
+[1m[31m[7m  [0m [91m                  ~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormsModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 13[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 14[0m[39m[22m[1m[31m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     FormsModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m13[0m   imports: [CommonModule, MatDialogModule],[39m[22m
+[1m[31m[7m  [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m9[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m30[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogTitle, MatDialogContent, MatDialogClose, MatButtonModule, MatDialogModule, MatProgressSpinnerModule, MatFormFieldModule, MatIconModule, MatTableModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 30[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 31[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m [39m[22m[1m[31m40[0m     MatTableModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 41[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m8[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatGridListModule, TileViewComponent]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m   imports: [CommonModule, MatGridListModule, TileViewComponent],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m3[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m3[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m9[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatDialogModule, MatIconModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m   imports: [CommonModule, MatCardModule, MatDialogModule, MatIconModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0m[39m[22m[1m[31mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m12[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatToolbarModule, MatFormFieldModule, MatInputModule, MatIconModule, FormsModule, MatMenuModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 12[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 13[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     MatMenuModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m7[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatButtonModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m7[0m   imports: [CommonModule, MatButtonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/auth.service.ts[0m:[93m2[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { HttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                           ~~~~~~~~~~~~~~~~~~~[39m[22m[1m[31m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m1[0m:[93m41[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m import { HttpClient, HttpHeaders } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                        ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m55[0m:[93m31[0m - [91merror[0m[90m TS7006: [0mParameter 'key' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m55[0m       headers.keys().forEach((key) => {[39m[22m
+[1m[31m[7m  [0m [91m                              ~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m6[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable)]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m6[0m   imports: [CommonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m×[39m[37m Failed to compile.[39m
+[32m✔[39m Browser application bundle generation complete.
+[37m[0m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[0m[39m
+[37m[0m1 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2025-02-16T17:35:51.725Z[39m[37m[22m - Hash: [1m[37m6ba78b771718d1b4[39m[37m[22m - Time: [1m[37m1427[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\src\tools\babel\webpack-loader.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@ngtools\webpack\src\ivy\index.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\src\tools\babel\webpack-loader.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular-devkit\build-angular\node_modules\postcss-loader\dist\cjs.js' in 'C:\tronox\Tronox-UI-Repo1[39m[22m[1m[31m\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\material\prebuilt-themes\indigo-pink.css?ngGlobalStyle' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\material\prebuilt-themes\indigo-pink.css?ngGlobalStyle' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\material\prebuilt-themes\indigo-pink.css?ngGlobalStyle' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\material\prebuilt-themes\indigo-pink.css?ngGlobalStyle' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mModule not found: Error: Can't resolve 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\@angular\material\prebuilt-themes\indigo-pink.css?ngGlobalStyle' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/Tronox-web/src/app/app.component.ts[0m:[93m10[0m:[93m14[0m - [91merror[0m[90m NG3004: [0mUnable to import directive RouterOutlet.[39m[22m
+[1m[31m  The module '@angular/router' could not be found.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m10[0m export class AppComponent {[39m[22m
+[1m[31m[7m  [0m [91m             ~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mnode_modules/@angular/router/index.d.ts[0m:[93m3874[0m:[93m1[0m[39m[22m
+[1m[31m    [7m3874[0m export declare class RouterOutlet implements OnDestroy, OnInit, RouterOutletContract {[39m[22m
+[1m[31m    [7m    [0m [96m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    [7m3875[0m     private activated;[39m[22m
+[1m[31m    [7m    [0m [96m~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    [7m ...[0m [39m[22m
+[1m[31m    [7m3933[0m     static ɵdir: i0.ɵɵDirectiveDeclaration<RouterOutlet, "router-outlet", ["outlet"], { "name": { "alias": "name"; "required": fal[39m[22m[1m[31mse; }; "routerOutletData": { "alias": "routerOutletData"; "required": false; "isSignal": true; }; }, { "activateEvents": "activate"; "deactivateEvents": "deactivate"; "attachEvents": "attach"; "detachEvents": "detach"; }, never, never, true, never>;[39m[22m
+[1m[31m    [7m    [0m [96m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    [7m3934[0m }[39m[22m
+[1m[31m    [7m    [0m [96m~[0m[39m[22m
+[1m[31m    The directive is declared here.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mapps/Tronox-web/src/app/app.config.ts[0m:[93m8[0m:[93m35[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m import { provideHttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                  ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m5[0m:[93m49[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/cdk/layout' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m5[0m import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';[39m[22m
+[1m[31m[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.t[39m[22m[1m[31ms[0m:[93m31[0m:[93m22[0m - [91merror[0m[90m NG2003: [0mNo suitable injection token for parameter 'breakpointObserver' of class 'DrawerLayoutComponent'.[39m[22m
+[1m[31m  Consider using the @Inject decorator to specify an injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m[7m  [0m [91m                     ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m31[0m:[93m42[0m[39m[22m
+[1m[31m    [7m31[0m     private readonly breakpointObserver: BreakpointObserver,[39m[22m
+[1m[31m    [7m  [0m [96m                                         ~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    This type does not have a value, so it cannot be used as injection token.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts[0m:[93m42[0m:[93m19[0m - [91merror[0m[90m TS7006: [0mParameter 'result' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m42[0m       .subscribe((result) => {[39m[22m
+[1m[31m[7m  [0m [91m                  ~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/login/login.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormsModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 13[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 14[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     FormsModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0[39m[22m[1m[31mm[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts[0m:[93m13[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m13[0m   imports: [CommonModule, MatDialogModule],[39m[22m
+[1m[31m[7m  [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m9[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts[0m:[93m30[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatDialogTitle, MatDialogContent, MatDialogClose, MatButtonModule, MatDialogModule, MatProgressSpinnerModule, MatFormFieldModule, MatIconModule, MatTableModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 30[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 31[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 40[0m     MatTableModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 41[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-la[39m[22m[1m[31myout/tile-layout.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts[0m:[93m8[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatGridListModule, TileViewComponent]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m8[0m   imports: [CommonModule, MatGridListModule, TileViewComponent],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m3[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m3[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/tile-view/tile-view.component.ts[0m:[93m9[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatCardModule, MatDialogModule, MatIconModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m9[0m   imports: [CommonModule, MatCardModule, MatDialogModule, MatIconModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~[39m[22m[1m[31m~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/toolbar/toolbar.component.ts[0m:[93m12[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatToolbarModule, MatFormFieldModule, MatInputModule, MatIconModule, FormsModule, MatMenuModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m 12[0m   imports: [[39m[22m
+[1m[31m[7m   [0m [91m           ~[0m[39m[22m
+[1m[31m[7m 13[0m     CommonModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m...[0m [39m[22m
+[1m[31m[7m 19[0m     MatMenuModule,[39m[22m
+[1m[31m[7m   [0m [91m~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[7m 20[0m   ],[39m[22m
+[1m[31m[7m   [0m [91m~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/ui-library/src/lib/ui-library/ui-library.component.ts[0m:[93m7[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable), MatButtonModule]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m7[0m   imports: [CommonModule, MatButtonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/auth.service.ts[0m:[93m2[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { HttpClient } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m1[0m:[93m41[0m - [91merror[0m[90m TS2307: [0mCannot find module '@ang[39m[22m[1m[31mular/common/http' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m1[0m import { HttpClient, HttpHeaders } from '@angular/common/http';[39m[22m
+[1m[31m[7m [0m [91m                                        ~~~~~~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/services/tile.service.ts[0m:[93m55[0m:[93m31[0m - [91merror[0m[90m TS7006: [0mParameter 'key' implicitly has an 'any' type.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m55[0m       headers.keys().forEach((key) => {[39m[22m
+[1m[31m[7m  [0m [91m                              ~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m2[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '@angular/common' or its corresponding type declarations.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { CommonModule } from '@angular/common';[39m[22m
+[1m[31m[7m [0m [91m                             ~~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0m[96mlibs/shared/util-library/src/lib/util-library/util-library.component.ts[0m:[93m6[0m:[93m12[0m - [91merror[0m[90m NG1010: [0m'imports' must be an array of components, directives, pipes, or NgModules.[39m[22m
+[1m[31m  Value is of type '[(not statically analyzable)]'.[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m6[0m   imports: [CommonModule],[39m[22m
+[1m[31m[7m [0m [91m           ~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[91mError: [39m[31m[0mCan't resolve 'node_modules/@angular/material/prebuilt-themes/indigo-pink.css' in 'C:\tronox\Tronox-UI-Repo1\Tronox-web'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m×[39m[37m Failed to compile.[39m
+node:internal/modules/cjs/loader:641
+      throw e;
+      ^
+
+Error: Cannot find module 'C:\tronox\Tronox-UI-Repo1\Tronox-web\node_modules\colorette\index.cjs'
+[90m    at createEsmNotFoundErr (node:internal/modules/cjs/loader:1262:15)[39m
+[90m    at finalizeEsmResolution (node:internal/modules/cjs/loader:1250:15)[39m
+[90m    at resolveExports (node:internal/modules/cjs/loader:634:14)[39m
+[90m    at Module._findPath (node:internal/modules/cjs/loader:724:31)[39m
+[90m    at Module._resolveFilename (node:internal/modules/cjs/loader:1211:27)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1051:27)[39m
+[90m    at Module.require (node:internal/modules/cjs/loader:1311:19)[39m
+    at Module.require [90m(C:\tronox\Tronox-UI-Repo1\Tronox-web\[39mnode_modules\[4mnx[24m\src\adapter\compat.js:70:40[90m)[39m
+[90m    at require (node:internal/modules/helpers:179:18)[39m
+    at [90mC:\tronox\Tronox-UI-Repo1\Tronox-web\[39mnode_modules\[4mwebpack-dev-middleware[24m\dist\utils\setupHooks.js:125:33
+[90m    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  path: [32m'C:\\tronox\\Tronox-UI-Repo1\\Tronox-web\\node_modules\\colorette\\package.json'[39m
+}
+
+Node.js v20.18.3

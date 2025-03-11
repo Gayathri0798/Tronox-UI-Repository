@@ -1,0 +1,11 @@
+.tile {
+  min-width: 200px; /* Matches mat-card width */
+  margin: 10px;
+  min-height: 100px; /* Matches mat-card height */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tile.fade-out {
+  opacity: 0;
+}

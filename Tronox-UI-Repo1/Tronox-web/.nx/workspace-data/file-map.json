@@ -1,0 +1,575 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.4.1",
+  "pathMappings": {
+    "@tronox-web/ui-library": [
+      "libs/shared/ui-library/src/index.ts"
+    ],
+    "@tronox-web/util-library": [
+      "libs/shared/util-library/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "11532813898455409296"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "2791812333060545200"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13453855593449684734"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "12269743867629339573"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5271629927757201771"
+      },
+      {
+        "file": "README.md",
+        "hash": "13086218101357081020"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "2336928227630864641"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "7544409015863045561"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4780377018024794745"
+      },
+      {
+        "file": "package.json",
+        "hash": "17669476536337910645"
+      },
+      {
+        "file": "test/pageobjects/login.page.ts",
+        "hash": "10726062731236078176"
+      },
+      {
+        "file": "test/pageobjects/page.ts",
+        "hash": "4105353206123598540"
+      },
+      {
+        "file": "test/pageobjects/secure.page.ts",
+        "hash": "2657972850964120149"
+      },
+      {
+        "file": "test/specs/test.e2e.ts",
+        "hash": "2673973507994952432"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "10113439952313149344"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "8542546943677771331"
+      },
+      {
+        "file": "wdio.conf.ts",
+        "hash": "16462286707341746486"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "2856788127493750714"
+      }
+    ],
+    "projectFileMap": {
+      "util-library": [
+        {
+          "file": "libs/shared/util-library/README.md",
+          "hash": "3106415020201300895"
+        },
+        {
+          "file": "libs/shared/util-library/eslint.config.mjs",
+          "hash": "2398396891847188576",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/project.json",
+          "hash": "17053083579898096163"
+        },
+        {
+          "file": "libs/shared/util-library/src/index.ts",
+          "hash": "2554212217321389679"
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/consts/index.ts",
+          "hash": "17328841969412248846"
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/consts/url.consts.ts",
+          "hash": "4938748741648452606"
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/guards/auth.guard.spec.ts",
+          "hash": "8826885499913990525",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/guards/auth.guard.ts",
+          "hash": "10177988054989197535",
+          "deps": [
+            "npm:@angular/router",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/guards/index.ts",
+          "hash": "2172280694623805806"
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/services/auth.service.spec.ts",
+          "hash": "6927655796975040699",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/services/auth.service.ts",
+          "hash": "13224215224623718580",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:rxjs",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/services/index.ts",
+          "hash": "17927234160545362737"
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/services/tile.service.spec.ts",
+          "hash": "17346820146050772252",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/services/tile.service.ts",
+          "hash": "16321967376711497255",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/util-library/util-library.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/util-library/util-library.component.html",
+          "hash": "11223049266155561749"
+        },
+        {
+          "file": "libs/shared/util-library/src/lib/util-library/util-library.component.ts",
+          "hash": "11764047825836808106",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/util-library/tsconfig.json",
+          "hash": "7430154797308057832"
+        },
+        {
+          "file": "libs/shared/util-library/tsconfig.lib.json",
+          "hash": "5980477949577494089"
+        }
+      ],
+      "ui-library": [
+        {
+          "file": "libs/shared/ui-library/README.md",
+          "hash": "11779552035765630704"
+        },
+        {
+          "file": "libs/shared/ui-library/eslint.config.mjs",
+          "hash": "2398396891847188576",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/project.json",
+          "hash": "13599632152641176951"
+        },
+        {
+          "file": "libs/shared/ui-library/src/index.ts",
+          "hash": "7726128141211610829"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.html",
+          "hash": "17811141857521272435"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.scss",
+          "hash": "9801664241423595770"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.spec.ts",
+          "hash": "15365402861180069844",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/drawer-layout/drawer-layout.component.ts",
+          "hash": "2067406584476738670",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/cdk",
+            "util-library"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/login/login.component.html",
+          "hash": "12479274789534748828"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/login/login.component.scss",
+          "hash": "1436194419316151561"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/login/login.component.spec.ts",
+          "hash": "14286510909486102227",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/login/login.component.ts",
+          "hash": "10022621247995066702",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "util-library",
+            "npm:@angular/router",
+            "npm:@angular/forms"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.html",
+          "hash": "10299715717969281349"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.scss",
+          "hash": "13258356896207496519"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.spec.ts",
+          "hash": "1560889665485040525",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/test-result-dialog/test-result-dialog.component.ts",
+          "hash": "4738232860531894833",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "util-library"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.html",
+          "hash": "6367449473037999995"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.scss",
+          "hash": "9768536871732028591"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.spec.ts",
+          "hash": "15900898143119426421",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-dialog-box/tile-dialog-box.component.ts",
+          "hash": "4797258926693154102",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "util-library"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-layout/tile-layout.component.html",
+          "hash": "247631947953107373"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-layout/tile-layout.component.scss",
+          "hash": "11363950574846282280"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-layout/tile-layout.component.spec.ts",
+          "hash": "7277934832730023660",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-layout/tile-layout.component.ts",
+          "hash": "220816336909128907",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-view/tile-view.component.html",
+          "hash": "470763853850724492"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-view/tile-view.component.scss",
+          "hash": "8523029243610488863"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-view/tile-view.component.spec.ts",
+          "hash": "8740918276784880092",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/tile-view/tile-view.component.ts",
+          "hash": "1300482558601811993",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/material",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/toolbar/toolbar.component.html",
+          "hash": "3734479298812654232"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/toolbar/toolbar.component.scss",
+          "hash": "15744546021556835484"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/toolbar/toolbar.component.spec.ts",
+          "hash": "17351577556127803332",
+          "deps": [
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/toolbar/toolbar.component.ts",
+          "hash": "5730573737290833586",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material",
+            "npm:@angular/forms",
+            "util-library"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/ui-library/ui-library.component.html",
+          "hash": "9396109785691201711"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/ui-library/ui-library.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/shared/ui-library/src/lib/ui-library/ui-library.component.ts",
+          "hash": "12626230010635723794",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/material"
+          ]
+        },
+        {
+          "file": "libs/shared/ui-library/tsconfig.json",
+          "hash": "7430154797308057832"
+        },
+        {
+          "file": "libs/shared/ui-library/tsconfig.lib.json",
+          "hash": "5980477949577494089"
+        }
+      ],
+      "Tronox-web": [
+        {
+          "file": "apps/Tronox-web/eslint.config.mjs",
+          "hash": "4022437926435226564",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/jest.config.ts",
+          "hash": "8464465310648749255"
+        },
+        {
+          "file": "apps/Tronox-web/project.json",
+          "hash": "8276191780408666694"
+        },
+        {
+          "file": "apps/Tronox-web/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/Tronox-web/src/app/app.component.html",
+          "hash": "3091786735254314659"
+        },
+        {
+          "file": "apps/Tronox-web/src/app/app.component.scss",
+          "hash": "4240071869313272041"
+        },
+        {
+          "file": "apps/Tronox-web/src/app/app.component.spec.ts",
+          "hash": "17337758565790323647",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/app/app.component.ts",
+          "hash": "15694051686587762702",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/app/app.config.server.ts",
+          "hash": "9913780908210103544",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/platform-server"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/app/app.config.ts",
+          "hash": "14524689023963952117",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/router",
+            "npm:@angular/platform-browser",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/app/app.routes.ts",
+          "hash": "11392837404218959416",
+          "deps": [
+            "npm:@angular/router",
+            "ui-library",
+            "util-library"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/app/nx-welcome.component.ts",
+          "hash": "12852950269903767682",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/assets/tronox_logo.png",
+          "hash": "7488638519545331278"
+        },
+        {
+          "file": "apps/Tronox-web/src/index.html",
+          "hash": "7979907936054387616"
+        },
+        {
+          "file": "apps/Tronox-web/src/main.server.ts",
+          "hash": "9257623809215978365",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/main.ts",
+          "hash": "875041330523952236",
+          "deps": [
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/server.ts",
+          "hash": "17010218948311622673",
+          "deps": [
+            "npm:zone.js",
+            "npm:@angular/common",
+            "npm:@angular/ssr",
+            "npm:express"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/src/styles.scss",
+          "hash": "14561162554540496184"
+        },
+        {
+          "file": "apps/Tronox-web/src/test-setup.ts",
+          "hash": "10311052578323244902",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "apps/Tronox-web/tsconfig.app.json",
+          "hash": "15840844869456775012"
+        },
+        {
+          "file": "apps/Tronox-web/tsconfig.editor.json",
+          "hash": "17575078801745175164"
+        },
+        {
+          "file": "apps/Tronox-web/tsconfig.json",
+          "hash": "5798422190385800407"
+        },
+        {
+          "file": "apps/Tronox-web/tsconfig.server.json",
+          "hash": "5086339023999729895"
+        },
+        {
+          "file": "apps/Tronox-web/tsconfig.spec.json",
+          "hash": "1930986853382524452"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<mat-toolbar [class]="className">
+  @if(showSearch){
+  <ng-container>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Search..."
+      />
+      <button class="search-button">
+        <span class="search-icon"><mat-icon>search</mat-icon></span>
+      </button>
+    </div>
+  </ng-container>
+
+  <span class="spacer"></span>
+
+  <!-- User Dropdown -->
+  <div class="user-dropdown" [matMenuTriggerFor]="userMenu">
+    <span class="user-name">Hello, {{ userName }}</span>
+    <mat-icon class="caret-icon">keyboard_arrow_down</mat-icon>
+  </div>
+
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="onLogoutClick()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </mat-menu>
+
+  } @if (imageSrc) {
+  <img [src]="imageSrc" alt="Toolbar Image" class="toolbar-image" />
+  } @if(drawerContent){
+  {{ drawerContent }}
+  }
+</mat-toolbar>

@@ -1,0 +1,100 @@
+<mat-dialog-content class="dialog-content">
+  <!-- Logo at the top-center of the dialog -->
+  <div class="dialog-logo">
+    <img src="assets/tronox_logo.png" alt="Logo" />
+  </div>
+
+  <!-- File Upload + Buttons (Side by Side) -->
+  <div class="input-actions-container">
+    <div>
+      <p mat-dialog-title class="dialog-title">
+        Upload an Excel file for {{ this.data?.tile?.appNamespec }}
+      </p>
+    </div>
+    <input
+      type="file"
+      accept=".xls,.xlsx"
+      (change)="onFileSelected($event)"
+      class="file-input"
+    />
+  </div>
+
+  <!-- Button container for Run Script, Download, and Close -->
+  <div class="button-container">
+    <button
+      mat-button
+      color="primary"
+      (click)="runScript()"
+      [disabled]="!fileUploaded || isProcessing"
+    >
+      ▶ Run Script
+    </button>
+
+    <mat-spinner *ngIf="isProcessing" diameter="24"></mat-spinner>
+
+    <button
+      mat-button
+      color="primary"
+      (click)="downloadTemplate()"
+      [disabled]="!wordFileBlob"
+    >
+      <mat-icon>download</mat-icon> Download Result
+    </button>
+
+    <button mat-button mat-dialog-close [disabled]="isProcessing">Close</button>
+  </div>
+
+  <!-- Conditionally Display Results -->
+  <div *ngIf="testResults && testResults.length > 0; else noResults">
+    <h3 class="results-title">Test Results</h3>
+
+    <div #resultsTable class="results-table">
+      <table mat-table [dataSource]="testResults" class="mat-elevation-z8">
+        <!-- Test Name Column -->
+        <ng-container matColumnDef="testName">
+          <th mat-header-cell *matHeaderCellDef>Test Name</th>
+          <td mat-cell *matCellDef="let result">{{ result.Testname }}</td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td
+            mat-cell
+            *matCellDef="let result"
+            [ngClass]="{
+              'status-passed': result.status === 'passed',
+              'status-failed': result.status === 'failed'
+            }"
+          >
+            {{ result.status }}
+          </td>
+        </ng-container>
+
+        <!-- Download Column (Now Third) -->
+        <ng-container matColumnDef="download">
+          <th mat-header-cell *matHeaderCellDef>Download</th>
+          <td mat-cell *matCellDef="let result" class="download-cell">
+            <a [href]="result.documentUrl" target="_blank" download>
+              <mat-icon>download</mat-icon>
+            </a>
+          </td>
+        </ng-container>
+
+        <tr
+          mat-header-row
+          *matHeaderRowDef="['testName', 'status', 'download']"
+        ></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: ['testName', 'status', 'download']"
+        ></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- No Results Message -->
+  <ng-template #noResults>
+    <p class="no-results" *ngIf="!hasResults">No results found.</p>
+  </ng-template>
+</mat-dialog-content>
