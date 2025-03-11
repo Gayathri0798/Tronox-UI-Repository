@@ -27,9 +27,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors({
-    origin: '*', // Allow all origins (Change to specific domain if needed)
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization'
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
 // Serve static files from "public" folder
