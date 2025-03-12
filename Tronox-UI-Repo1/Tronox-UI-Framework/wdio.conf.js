@@ -62,7 +62,10 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'MicrosoftEdge'
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
+        binary: '/usr/bin/microsoft-edge', // Use `which microsoft-edge` to confirm the path
+    }
     },
     {
         browserName: 'chrome'
