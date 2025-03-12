@@ -65,6 +65,13 @@ export const config = {
         browserName: 'MicrosoftEdge',
         'ms:edgeOptions': {
         binary: '/usr/bin/microsoft-edge', // Use `which microsoft-edge` to confirm the path
+        args: [
+            '--headless', // Run Edge in headless mode
+            '--no-sandbox', // Bypass OS security model
+            '--disable-gpu', // Disable GPU hardware acceleration
+            '--remote-debugging-port=9222', // Specify a debugging port
+            '--disable-dev-shm-usage' // Overcome shared memory issues
+        ]
     }
     },
     {
