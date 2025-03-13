@@ -38,3 +38,9 @@ div.icon>.material-icons{
   height: 50px !important;
   width: 50px !important;
 }
+
+.tile-name{
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
