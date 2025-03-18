@@ -65,7 +65,7 @@ export const config = {
         browserName: 'chrome',
         'goog:chromeOptions': {
         args: [
-            // '--headless', // Run tests in headless mode (remove if you want UI)
+            '--headless', // Run tests in headless mode (remove if you want UI)
             // '--disable-gpu',
             '--window-size=1920,1080',
             '--no-sandbox',

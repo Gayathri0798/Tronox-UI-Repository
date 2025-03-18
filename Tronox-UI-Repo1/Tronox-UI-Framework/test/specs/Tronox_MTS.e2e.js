@@ -11,10 +11,10 @@ describe('Create Create Maintenance Notification and Order', () => {
   let testResults = [];
   let screenshotData = [];
   let summary = { passed: 0, failed: 0 };
-  var errorStep="";
+  // var errorStep="";
   
   const takeScreenshot = async (stepName) => {
-    errorStep = stepName;
+    // errorStep = stepName;
     const fileName = `screenshot_${stepName}_${Date.now()}.png`;
     const filePath = `./screenshots/${fileName}`;
     screenshotData.push(filePath);
@@ -46,7 +46,7 @@ const endTestcase = (data) => {
 
     it('Should Create Maintenance Notification and Order', async() => {
       //jeeva changes start
-      errorStep="";
+      // errorStep="";
       initTestcase();
       try {
       //jeeva changes end
@@ -243,7 +243,7 @@ const endTestcase = (data) => {
         status: 'failed', // Default to failed
         screenshots: screenshotData,
         error: error.message,
-        errorstep:`Testcase failed at ${errorStep}`
+        // errorstep:`Testcase failed at ${errorStep}`
         };
         endTestcase(result);
         summary.failed++;
