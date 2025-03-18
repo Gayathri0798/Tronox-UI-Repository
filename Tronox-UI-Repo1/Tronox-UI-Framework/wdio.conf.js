@@ -63,18 +63,18 @@ export const config = {
     //
     capabilities: [{
         browserName: 'chrome',
-    //     'goog:chromeOptions': {
-    //     args: [
-    //         '--headless', // Run tests in headless mode (remove if you want UI)
-    //         '--disable-gpu',
-    //         '--window-size=1920,1080',
-    //         '--no-sandbox',
-    //         '--disable-dev-shm-usage',
-    //         '--ignore-certificate-errors',
-    //         '--disable-infobars',
-    //         '--disable-popup-blocking'
-    //     ]
-    // }
+        'goog:chromeOptions': {
+        args: [
+            '--headless', // Run tests in headless mode (remove if you want UI)
+            // '--disable-gpu',
+            '--window-size=1920,1080',
+            '--no-sandbox',
+            '--disable-dev-shm-usage',
+            '--ignore-certificate-errors',
+            '--disable-infobars',
+            '--disable-popup-blocking'
+        ]
+    }
     },
     ],
 
