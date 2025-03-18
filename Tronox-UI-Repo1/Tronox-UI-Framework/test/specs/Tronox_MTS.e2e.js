@@ -130,6 +130,14 @@ const endTestcase = (data) => {
   await Base.waitForDisplayedAndClick(selectEquipment, 5000);
   await browser.pause(5000);
  
+  //Gayathri changes
+  // ENTER ANSWER INPUT HERE
+const answerInput = await $(locators.answerInput);
+await answerInput.waitForExist({ timeout: 20000 }); // Wait up to 20 seconds
+await answerInput.setValue('myAnswer');
+await takeScreenshot('enter_answer_input');
+await browser.pause(5000);
+ //Gayathri changes
   // save the Document
   const clickOnSave = await $('//div[@title="Save (Ctrl+S)"]');
   await Base.waitForDisplayedAndClick(clickOnSave, 5000);
