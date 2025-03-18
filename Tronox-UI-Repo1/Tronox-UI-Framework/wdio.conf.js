@@ -76,6 +76,12 @@ export const config = {
         ]
     }
     },
+    {
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
+            args: ['--headless', '--window-size=1920,1080']
+        }
+    }
     ],
 
     //
