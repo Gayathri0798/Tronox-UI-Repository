@@ -515,7 +515,7 @@ app.post("/testcase-results", verifyToken, async (req, res) => {
     testResults.map(async (test) => {
       const docFileName = `${test.Testname.replace(/\s+/g, "_")}.docx`;
       const docFilePath = path.join(DOCUMENTS_FOLDER, docFileName);
-      const docDownloadURL = `http://localhost:${port}/documents/${docFileName}`;
+      const docDownloadURL = `http://34.93.231.170:${port}/documents/${docFileName}`;
       const currentDateTime = new Date().toLocaleString();
       console.log(currentDateTime + " " + test.status + " " + test.error);
       console.log(testScriptName);
