@@ -85,7 +85,7 @@ function runScript(req, res) {
 }
 app.post("/run-script", (req, res) => {
   // Run the test case using a child process
-  exec("npx wdio run wdio.conf.js --spec test/specs/Tronox_MTS.e2e.js", (error, stdout, stderr) => {
+  exec("npx wdio", (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return res.status(500).send(`Test run failed: ${error.message}`);
