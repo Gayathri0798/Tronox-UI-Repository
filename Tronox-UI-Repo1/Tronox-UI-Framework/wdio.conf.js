@@ -28,9 +28,9 @@ export const config = {
     // will be called from there.
     //
     specs: [
-        // './test/specs/**/*.js'
+        './test/specs/**/*.js'
         // `./test/specs/${global.wdioEnvParameters.config.appNamespec}.js`
-        `./test/specs/Tronox_MTS.e2e.js`
+        // `./test/specs/Tronox_MTS.e2e.js`
         // './test/specs/login.e2enew.js'
         // './test/specs/Jamaica.e2e.js'
         // './test/specs/elements.e2e.js'

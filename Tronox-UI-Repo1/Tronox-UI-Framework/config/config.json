@@ -23,11 +23,6 @@
         "baseUrl": "https://tronox.okta.com/",
         "appName": "Tronox",
         "appNamespec": "Tronox_MTS.e2e"
-    },
-    "Tronox": {
-        "baseUrl": "https://tronox.okta.com/",
-        "appName": "Tronox",
-        "appNamespec": "Tronox_04_STP_IM_GIToCostCenter.e2e"
     }
     
 }
