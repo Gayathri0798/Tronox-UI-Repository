@@ -13,72 +13,32 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": "test/pageobjects/page.ts",
+        "hash": "4105353206123598540"
+      },
+      {
         "file": ".editorconfig",
         "hash": "11532813898455409296"
       },
       {
-        "file": ".gitignore",
-        "hash": "5131862326634010681"
+        "file": "dist/apps/Tronox-web/browser/polyfills.abc1dabdeaa273f8.js",
+        "hash": "13967045050328599991"
+      },
+      {
+        "file": "dist/apps/Tronox-web/browser/assets/tronox_logo.png",
+        "hash": "7488638519545331278"
       },
       {
         "file": ".prettierignore",
         "hash": "12269743867629339573"
       },
       {
-        "file": ".prettierrc",
-        "hash": "6820402234827505055"
+        "file": "dist/apps/Tronox-web/browser/3rdpartylicenses.txt",
+        "hash": "13766982843438918248"
       },
       {
-        "file": ".vscode/extensions.json",
-        "hash": "5271629927757201771"
-      },
-      {
-        "file": "README.md",
-        "hash": "13086218101357081020"
-      },
-      {
-        "file": "eslint.config.mjs",
-        "hash": "2336928227630864641"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "7544409015863045561"
-      },
-      {
-        "file": "jest.preset.js",
-        "hash": "7473220183190921152"
-      },
-      {
-        "file": "nx.json",
-        "hash": "4780377018024794745"
-      },
-      {
-        "file": "package.json",
-        "hash": "4492156639687375961"
-      },
-      {
-        "file": "test/pageobjects/login.page.ts",
-        "hash": "10726062731236078176"
-      },
-      {
-        "file": "test/pageobjects/page.ts",
-        "hash": "4105353206123598540"
-      },
-      {
-        "file": "test/pageobjects/secure.page.ts",
-        "hash": "2657972850964120149"
-      },
-      {
-        "file": "test/specs/test.e2e.ts",
-        "hash": "2673973507994952432"
-      },
-      {
-        "file": "tsconfig.base.json",
-        "hash": "10113439952313149344"
-      },
-      {
-        "file": "tsconfig.json",
-        "hash": "8542546943677771331"
+        "file": "dist/apps/Tronox-web/browser/index.html",
+        "hash": "18131797404675417050"
       },
       {
         "file": "wdio.conf.ts",
@@ -87,6 +47,78 @@
       {
         "file": "yarn.lock",
         "hash": "2856788127493750714"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "7473220183190921152"
+      },
+      {
+        "file": "README.md",
+        "hash": "13086218101357081020"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "10113439952313149344"
+      },
+      {
+        "file": "package.json",
+        "hash": "4492156639687375961"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "10669644581828085110"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "6820402234827505055"
+      },
+      {
+        "file": "eslint.config.mjs",
+        "hash": "2336928227630864641"
+      },
+      {
+        "file": "nx.json",
+        "hash": "4780377018024794745"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "8542546943677771331"
+      },
+      {
+        "file": "dist/apps/Tronox-web/browser/global/favicon.ico",
+        "hash": "9303420814833116677"
+      },
+      {
+        "file": "dist/apps/Tronox-web/browser/main.fec0732612ade444.js",
+        "hash": "2636398364716421186"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "7544409015863045561"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5271629927757201771"
+      },
+      {
+        "file": "dist/apps/Tronox-web/browser/runtime.cc1b3f9563a51334.js",
+        "hash": "9267875783882186086"
+      },
+      {
+        "file": "test/specs/test.e2e.ts",
+        "hash": "2673973507994952432"
+      },
+      {
+        "file": "test/pageobjects/login.page.ts",
+        "hash": "10726062731236078176"
+      },
+      {
+        "file": "test/pageobjects/secure.page.ts",
+        "hash": "2657972850964120149"
+      },
+      {
+        "file": "dist/apps/Tronox-web/browser/styles.049da6763c401b99.css",
+        "hash": "1996759273029132899"
       }
     ],
     "projectFileMap": {
@@ -259,7 +291,7 @@
         },
         {
           "file": "libs/shared/util-library/src/lib/consts/url.consts.ts",
-          "hash": "10467156881228408894"
+          "hash": "15798092335845696650"
         },
         {
           "file": "libs/shared/util-library/src/lib/guards/auth.guard.spec.ts",

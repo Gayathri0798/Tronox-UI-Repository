@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "nx run Tronox-web:build:production",
-    "startTime": "2025-03-18T05:12:55.209Z",
-    "endTime": "2025-03-18T05:13:14.609Z",
+    "startTime": "2025-03-18T06:15:13.906Z",
+    "endTime": "2025-03-18T06:16:19.261Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "Tronox-web:build:production",
       "target": "build",
       "projectName": "Tronox-web",
-      "hash": "14259603393229511254",
-      "startTime": "2025-03-18T05:12:55.606Z",
-      "endTime": "2025-03-18T05:13:14.509Z",
+      "hash": "7407253316477778362",
+      "startTime": "2025-03-18T06:15:14.666Z",
+      "endTime": "2025-03-18T06:16:19.179Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0
