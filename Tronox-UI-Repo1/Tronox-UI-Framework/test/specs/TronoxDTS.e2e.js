@@ -1,6 +1,6 @@
 import BasePage from "../../common.js"
-let dataset = await import('../Data/'+ global.wdioEnvParameters.config.appName +'/Physicalinventory.json', { assert: { type: 'json' } });
-let locators = await import('../pageobjects/elementIdentifiers/'+ global.wdioEnvParameters.config.appName +'/physicalinventoryxpath.json', { assert: { type: 'json' } })
+let dataset = await import('../Data/Tronox/Physicalinventory.json', { assert: { type: 'json' } });
+let locators = await import('../pageobjects/elementIdentifiers/Tronox/physicalinventoryxpath.json', { assert: { type: 'json' } })
 locators=locators.default;
 dataset=dataset.default;
 
@@ -12,7 +12,7 @@ describe('SAP Furio app Automation', () => {
     let testResults = [];
 
     before(async () => {
-        await browser.url(global.wdioEnvParameters.config.baseUrl);
+        await browser.url('https://tronox.okta.com/');
         await browser.maximizeWindow();
     });
 
