@@ -83,6 +83,23 @@ function runScript(req, res) {
     res.send(`Test run completed successfully: ${stdout}`);
   });
 }
+app.post("/run-script", (req, res) => {
+  // Run the test case using a child process
+  exec("npx wdio run wdio.conf.js --spec test/specs/Tronox_MTS.e2e.js", (error, stdout, stderr) => {
+    if (error) {
+      console.error(`exec error: ${error}`);
+      return res.status(500).send(`Test run failed: ${error.message}`);
+    }
+ 
+    if (stderr) {
+      console.error(`stderr: ${stderr}`);
+      return res.status(500).send(`Test run failed with error: ${stderr}`);
+    }
+ 
+    console.log(`stdout: ${stdout}`);
+    res.send(`Test run completed successfully: ${stdout}`);
+  });
+});
 // Route to trigger the test case
 app.post("/run-test", (req, res) => {
   // Run the test case using a child process
