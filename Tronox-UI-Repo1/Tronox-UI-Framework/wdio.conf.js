@@ -1,9 +1,3 @@
-import envConfig from 'konfig';
-import { exec } from 'child_process';
-import Video from 'wdio-video-reporter';
-// import buildDevLogger  from '../../logerror/logfile.js';
-import {logger} from './logerror/logfile.js';
-global.wdioEnvParameters = new envConfig({ path: './config' })
 export const config = {
     //
     // ====================
@@ -23,17 +17,11 @@ export const config = {
     // worker process. In order to have a group of spec files run in the same worker
     // process simply enclose them in an array within the specs array.
     //
-    // If you are calling `wdio` from an NPM script (see https://docs.npmjs.com/cli/run-script),
-    // then the current working directory is where your `package.json` resides, so `wdio`
-    // will be called from there.
+    // The path of the spec files will be resolved relative from the directory of
+    // of the config file unless it's absolute.
     //
     specs: [
-        // './test/specs/**/*.js'
-        // `./test/specs/${global.wdioEnvParameters.config.appNamespec}.js`
-        `./test/specs/Tronox_MTS.e2e.js`
-        // './test/specs/login.e2enew.js'
-        // './test/specs/Jamaica.e2e.js'
-        // './test/specs/elements.e2e.js'
+        './test/specs/**/Tronox_MTS.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -62,28 +50,9 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome',
-        'goog:chromeOptions': {
-        args: [
-            '--headless', // Run tests in headless mode (remove if you want UI)
-            // '--disable-gpu',
-            '--window-size=1920,1080',
-            '--no-sandbox',
-            '--disable-dev-shm-usage',
-            '--ignore-certificate-errors',
-            '--disable-infobars',
-            '--disable-popup-blocking'
-        ]
-    }
-    },
-    {
-        browserName: 'MicrosoftEdge',
-        'ms:edgeOptions': {
-            args: ['--headless', '--window-size=1920,1080']
-        }
-    }
-    ],
-
+        browserName: 'chrome'
+    }],
+ 
     //
     // ===================
     // Test Configurations
@@ -96,7 +65,7 @@ export const config = {
     // Set specific log levels per logger
     // loggers:
     // - webdriver, webdriverio
-    // - @wdio/browserstack-service, @wdio/devtools-service, @wdio/sauce-service
+    // - @wdio/browserstack-service, @wdio/lighthouse-service, @wdio/sauce-service
     // - @wdio/mocha-framework, @wdio/jasmine-framework
     // - @wdio/local-runner
     // - @wdio/sumologic-reporter
@@ -115,10 +84,10 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    // baseUrl: 'http://localhost:8080',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 200000,
+    waitforTimeout: 10000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -131,7 +100,7 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['devtools'],
+    // services: [],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -140,7 +109,7 @@ export const config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+   
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -154,55 +123,15 @@ export const config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: [
-        'spec', 
-        ['allure', {
-            outputDir: 'allure-results',
-            disableWebdriverStepsReporting: false,
-            disableWebdriverScreenshotsReporting: false,
-        }],
-        [Video, {
-            saveAllVideos: true, // Save only failed test cases
-            videoSlowdownMultiplier: 3, // Slow down playback for better visibility
-        }]
-    ],
-
-    onComplete() {
-        // Generate Allure report
-        exec('allure generate allure-results --clean', (error, stdout, stderr) => {
-            if (error) {
-                console.error(`Error generating Allure report: ${error.message}`);
-                return;
-            }
-            if (stderr) {
-                console.error(`Allure CLI error: ${stderr}`);
-                return;
-            }
-            console.log(`Allure report generated successfully.`, stdout);
-            
-            // Open the Allure report using the Allure command-line interface
-            exec('allure open', (openError, openStdout, openStderr) => {
-                if (openError) {
-                    console.error(`Error opening Allure report: ${openError.message}`);
-                    return;
-                }
-                if (openStderr) {
-                    console.error(`Allure CLI error: ${openStderr}`);
-                    return;
-                }
-                console.log(`Allure report opened successfully.`, openStdout);
-            });
-        });
-    },
-
+    reporters: ['spec'],
+ 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 1000000
-        // require: ['@babel/register']
+        timeout: 60000
     },
-
+ 
     //
     // =====
     // Hooks
@@ -246,11 +175,8 @@ export const config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      * @param {string} cid worker id (e.g. 0-0)
      */
-        beforeSession: function (config, capabilities, specs, cid) {
-            global.wdioEnvParameters = new envConfig({ path: './config' })
-            console.log(global.wdioEnvParameters);
-            console.log(process.env.NODE_ENV);
-        },
+    // beforeSession: function (config, capabilities, specs, cid) {
+    // },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
@@ -258,9 +184,8 @@ export const config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {object}         browser      instance of created browser/device session
      */
-    before: function (capabilities, specs) {
-        browser.reloadSession(); // Ensures a fresh session before every test
-    },
+    // before: function (capabilities, specs) {
+    // },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {string} commandName hook command name
@@ -291,11 +216,6 @@ export const config = {
      */
     // afterHook: function (test, context, { error, result, duration, passed, retries }, hookName) {
     // },
-    afterStep: function (test, scenario, { error, duration, passed }) {
-        if (error) {
-           browser.takeScreenshot();
-        }
-     },
     /**
      * Function to be executed after a test (in Mocha/Jasmine only)
      * @param {object}  test             test object
@@ -306,14 +226,10 @@ export const config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
-        if (!passed) {
-            await browser.takeScreenshot();
-            logger.info(`${error}`);
-        }
-    },
-
-
+    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
+    // },
+ 
+ 
     /**
      * Hook that gets executed after the suite has ended
      * @param {object} suite suite details
