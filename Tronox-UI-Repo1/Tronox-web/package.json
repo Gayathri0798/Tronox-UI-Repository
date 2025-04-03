@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start:dev": "yarn nx run Tronox-web:serve",
-    "build:dev":"nx run Tronox-web:build:production",
+    "build:dev": "nx run Tronox-web:build:production",
     "wdio": "wdio run ./wdio.conf.ts",
     "wdiofirefox": "wdio run ./wdio.conf.firefox.js",
     "gegenerate-allure-report": "allure generate allure-results --clean",
@@ -26,6 +26,7 @@
     "@angular/ssr": "~19.1.0",
     "express": "^4.21.2",
     "rxjs": "~7.8.0",
+    "socket.io-client": "^4.8.1",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {

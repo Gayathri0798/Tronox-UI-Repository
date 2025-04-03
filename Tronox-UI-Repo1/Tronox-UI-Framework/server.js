@@ -27,6 +27,7 @@ app.use(bodyParser.json());
 // Fix __dirname in ES Module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const LOG_FILE_PATH = path.join(__dirname, "testStepsLog.txt");
  
 // Serve static files from "public" folder
 app.use(express.static(path.join(__dirname, "public")));
@@ -36,6 +37,61 @@ function isEmptyObject(obj) {
   return obj && typeof obj === "object" && Object.keys(obj).length === 0;
 }
  
+let lastFileSize = 0; // Stores last read file position
+
+app.get("/get-log-updates", (req, res) => {
+  res.setHeader("Content-Type", "text/plain");
+  res.setHeader("Transfer-Encoding", "chunked");
+
+  console.log("✅ Client connected to /get-log-updates");
+
+  // Read the full file when the client first connects
+  fs.readFile(LOG_FILE_PATH, "utf8", (err, data) => {
+    if (!err) {
+      res.write(data); // Send the existing content
+      lastFileSize = data.length; // Update file position
+    }
+  });
+
+  // Function to send only new lines
+  function sendNewLines() {
+    fs.stat(LOG_FILE_PATH, (err, stats) => {
+      if (err) {
+        console.error("❌ Error reading log file:", err);
+        return;
+      }
+
+      if (stats.size > lastFileSize) {
+        const stream = fs.createReadStream(LOG_FILE_PATH, {
+          encoding: "utf8",
+          start: lastFileSize, // Read only new data
+        });
+
+        stream.on("data", (chunk) => {
+          console.log("🔹 New Log Entry Sent:", chunk.trim());
+          res.write(chunk); // Send new logs to the client
+        });
+
+        stream.on("end", () => {
+          lastFileSize = stats.size; // Update last read position
+        });
+      }
+    });
+  }
+
+  // Use `fs.watch` instead of `fs.watchFile` to reduce duplicate triggers
+  const watcher = fs.watch(LOG_FILE_PATH, sendNewLines);
+
+  req.on("close", () => {
+    console.log("❌ Client disconnected from /get-log-updates");
+    watcher.close(); // Stop watching file
+    res.end();
+  });
+});
+
+
+
+
 // Login API to issue JWT token
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
@@ -120,7 +176,9 @@ app.get("/api/tiles", verifyToken, (req, res) => {
   }
 });
 let testScriptName = "";
+const logFilePath = './testStepsLog.txt';
 app.post("/testcase-exec", verifyToken, upload.single("file"), (req, res) => {
+  fs.writeFileSync(logFilePath, "", "utf8");
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
   }

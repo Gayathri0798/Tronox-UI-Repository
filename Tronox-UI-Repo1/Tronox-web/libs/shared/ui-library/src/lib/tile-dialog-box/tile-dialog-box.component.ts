@@ -4,6 +4,7 @@ import {
   ElementRef,
   inject,
   Inject,
+  OnInit,
   ViewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -42,13 +43,41 @@ import { MatTableModule } from '@angular/material/table';
   templateUrl: './tile-dialog-box.component.html',
   styleUrl: './tile-dialog-box.component.scss',
 })
-export class TileDialogBoxComponent implements AfterViewChecked {
+export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   hasResults = true;
+  logs:any;
+  logContent: any;
   constructor(
     public dialogRef: MatDialogRef<TileDialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private readonly tileService: TileService
   ) {}
+  ngOnInit(): void {
+    this.logContent = [];
+  }
+  fetchLiveLogUpdates() {
+    fetch("http://34.93.231.170:3000/get-log-updates")
+      .then((response) => {
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+
+        const read = () => {
+          reader?.read().then(({ value, done }) => {
+            if (done) {
+              console.log("✅ Log Streaming Finished");
+              return;
+            }
+            const newLog = decoder.decode(value);
+            console.log("🔹 Log Update Received:", newLog);
+            this.logContent.push(newLog);
+            read();
+          });
+        };
+
+        read();
+      })
+      .catch(console.error);
+  }
 
   fileName: string | null = null;
   fileUrl: string | null = null;
@@ -78,37 +107,44 @@ export class TileDialogBoxComponent implements AfterViewChecked {
 
   runScript(): void {
     if (!this.file) return;
-
+  
     this.isProcessing = true;
     this.wordFileBlob = null;
     this.result = ''; // Clear previous results
-
-    this.tileService
-      .uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec)
+    this.logContent = []; // Clear logs before starting new execution
+  
+    // Show terminal by adding class
+    setTimeout(() => {
+      const terminal = document.querySelector(".terminal");
+      if (terminal) {
+        terminal.classList.add("terminal-active");
+      }
+    }, 100);
+  
+    this.tileService.uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec)
       .subscribe({
         next: (chunk) => {
-          this.result += chunk;
+          console.log('🔹 Raw Chunk Received:', chunk);
+  
+          // Regex to match only logs in the format: "YYYY-MM-DDTHH:mm:ss.SSSZ - Testcase failed at ..."
+          const logPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z - Testcase failed at .+$/gm;
+          const filteredLines = chunk.match(logPattern) || []; // Extract valid log lines
+  
+          if (filteredLines.length > 0) {
+            this.logContent.push(...filteredLines);
+            console.log('✅ Filtered Log Entries:', filteredLines);
+          }
         },
         error: (error) => {
-          console.error('Error uploading file:', error);
+          console.error("❌ Error uploading file:", error);
           this.isProcessing = false;
           this.fetchTestResults();
         },
         complete: () => {
-          console.log('✅ File processing complete');
+          console.log("✅ File processing complete");
           this.isProcessing = false;
+          this.fetchLiveLogUpdates();
           this.fetchTestResults();
-          // Fetch the Word document result and store it
-          // this.tileService.getWordDocResult().subscribe({
-          //   next: (blob: Blob) => {
-          //     console.log('📄 Word file received');
-          //     this.wordFileBlob = blob;
-          //   },
-          //   error: (err) => {
-          //     console.error('❌ Error fetching Word file:', err);
-          //     alert('Failed to fetch Word file.');
-          //   },
-          // });
         },
       });
   }

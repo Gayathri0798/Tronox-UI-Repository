@@ -37208,6 +37208,26 @@
       "type": "static"
     },
     {
+      "source": "npm:socket.io-client",
+      "target": "npm:@socket.io/component-emitter",
+      "type": "static"
+    },
+    {
+      "source": "npm:socket.io-client",
+      "target": "npm:debug@4.3.7",
+      "type": "static"
+    },
+    {
+      "source": "npm:socket.io-client",
+      "target": "npm:engine.io-client",
+      "type": "static"
+    },
+    {
+      "source": "npm:socket.io-client",
+      "target": "npm:socket.io-parser",
+      "type": "static"
+    },
+    {
       "source": "npm:socket.io-parser",
       "target": "npm:@socket.io/component-emitter",
       "type": "static"

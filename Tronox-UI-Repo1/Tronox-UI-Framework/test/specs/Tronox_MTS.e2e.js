@@ -5,8 +5,10 @@ locators=locators.default;
 dataset=dataset.default;
 const Base = new BasePage();
 import fs from 'fs';
+const logFilePath = './testStepsLog.txt';
 describe('Create Create Maintenance Notification and Order', () => {
 
+  fs.writeFileSync(logFilePath, "", "utf8");
   //jeeva changes start
   let testResults = [];
   let screenshotData = [];
@@ -22,6 +24,10 @@ describe('Create Create Maintenance Notification and Order', () => {
     console.log('screenshot data length >> '+screenshotData.length);
     await browser.saveScreenshot(filePath);
     
+};
+const logStepToFile = (stepMessage) => {
+    const timestamp = new Date().toISOString();
+    fs.appendFileSync(logFilePath, `${timestamp} - ${stepMessage}\n`);
 };
 
 after(async () => {
@@ -57,23 +63,24 @@ const endTestcase = (data) => {
         
         await Base.waitForDisplayedAndSetValue($(locators.Codepathxpath), dataset.logincred.code); // OTP_____________________
         await Base.waitForDisplayedAndClick($(locators.verifybuttonxpath), 5000);
-        await browser.pause(10000)  
+        logStepToFile('login_success');
+        await browser.pause(10000) 
     
     const dashboardElement = await $("//section[@id='main-content']/child::section/section/descendant::section[35]");
     const CreateMaintenanceNotification = $('//*[@id="dashboardGroups"]/div/child::div/descendant::ul/descendant::div[289]/child::div/div');
     const CreateMaintenanceOrder = $('//*[@id="dashboardGroups"]/div/child::div/descendant::ul/descendant::div[299]/child::div/div');
-    
- 
  
   // Fiori Tiles Selection
   await dashboardElement.scrollIntoView();
   await Base.waitForDisplayedAndClick(dashboardElement, 5000);
+  logStepToFile('dashboard_clicked');
   await takeScreenshot('dashboard_clicked');
   await browser.pause(5000);
  
    // Switch window
    const currentWindow = await browser.getWindowHandles();
    await browser.switchToWindow(currentWindow[1]);
+   logStepToFile('new_window_opened');
    await takeScreenshot('new_window_opened');
    await browser.pause(5000);
  
@@ -89,12 +96,14 @@ const endTestcase = (data) => {
   const enterNotificationType = await $('//input[@id="M0:46:::2:22"]');
   await Base.waitForDisplayedAndSetValue(enterNotificationType, dataset.MTSNOftification.NotificationType);
   await browser.keys('Enter');
+  logStepToFile('Enter_notification');
   await takeScreenshot('Enter_notification');
   await browser.pause(5000);
  
    // enter Notification Discription
    const enterNotificationDiscription = await $('//input[@id="M0:46:1:1::0:10"]');
    await Base.waitForDisplayedAndSetValue(enterNotificationDiscription, dataset.MTSNOftification.NotificationDiscription);
+   logStepToFile('Enter_notification_description');
    await takeScreenshot('Enter_notification_description');
    await browser.pause(5000);
  
@@ -106,6 +115,7 @@ const endTestcase = (data) => {
   // Select Priority
   const selectPriority = await $('//div[@data-itemvalue2="Urgent"]');
   await Base.waitForDisplayedAndClick(selectPriority, 5000);
+  logStepToFile('select_priority');
   await takeScreenshot('select_priority');
   await browser.pause(5000);
  
@@ -122,6 +132,7 @@ const endTestcase = (data) => {
     // enter Equipment
     const enterEquipment = await $('//input[@id="M0:46:2:3B256:1:1:1::1:16"]');
     await Base.waitForDisplayedAndSetValue(enterEquipment, dataset.MTSNOftification.Equipment);
+    logStepToFile('Enter_equipment');
     await takeScreenshot('Enter_equipment');
     await browser.pause(5000);
  
@@ -245,6 +256,7 @@ const endTestcase = (data) => {
         error: error.message,
         errorstep:`Testcase failed at ${errorStep}`
         };
+        logStepToFile(`Testcase failed at ${errorStep}`);
         endTestcase(result);
         summary.failed++;
     }

@@ -80,4 +80,22 @@ export class TileService {
     const headers = this.setHeaders();
     return this.http.post<any[]>(TEST_RESULTS, {}, { headers });
   }
+
+  getLogUpdates(): Observable<string> {
+    return new Observable<string>((observer) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "http://34.93.231.170:3000/get-log-updates", true);
+  
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === 3) {
+          observer.next(xhr.responseText);
+        } else if (xhr.readyState === 4) {
+          observer.complete();
+        }
+      };
+  
+      xhr.send();
+    });
+  }
+  
 }
