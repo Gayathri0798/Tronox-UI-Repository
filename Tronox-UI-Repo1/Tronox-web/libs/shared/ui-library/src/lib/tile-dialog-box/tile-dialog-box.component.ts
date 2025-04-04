@@ -79,7 +79,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   //     .catch(console.error);
   // }
   startLogStream(): void {
-    const eventSource = new EventSource('http://localhost:3000/get-log-updates');
+    const eventSource = new EventSource('http://34.93.231.170:3000/get-log-updates');
   
     eventSource.onmessage = (event) => {
       console.log("🔹 Log update received:", event.data);
