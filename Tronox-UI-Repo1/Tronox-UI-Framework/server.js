@@ -43,48 +43,51 @@ app.get("/get-log-updates", (req, res) => {
   res.setHeader("Content-Type", "text/plain");
   res.setHeader("Transfer-Encoding", "chunked");
 
-  console.log("✅ Client connected to /get-log-updates");
+  console.log("📡 Client connected to /get-log-updates");
 
-  // Read the full file when the client first connects
-  fs.readFile(LOG_FILE_PATH, "utf8", (err, data) => {
-    if (!err) {
-      res.write(data); // Send the existing content
-      lastFileSize = data.length; // Update file position
+  let lastSize = 0;
+
+  // Send any existing content first
+  fs.stat(LOG_FILE_PATH, (err, stats) => {
+    if (!err && stats.size > 0) {
+      const stream = fs.createReadStream(LOG_FILE_PATH, {
+        start: 0,
+        end: stats.size,
+        encoding: "utf8"
+      });
+
+      stream.on("data", (chunk) => {
+        res.write(chunk);
+        lastSize = stats.size;
+      });
     }
   });
 
-  // Function to send only new lines
-  function sendNewLines() {
+  // Watch for new additions
+  const interval = setInterval(() => {
     fs.stat(LOG_FILE_PATH, (err, stats) => {
-      if (err) {
-        console.error("❌ Error reading log file:", err);
-        return;
-      }
+      if (err || stats.size <= lastSize) return;
 
-      if (stats.size > lastFileSize) {
-        const stream = fs.createReadStream(LOG_FILE_PATH, {
-          encoding: "utf8",
-          start: lastFileSize, // Read only new data
-        });
+      const stream = fs.createReadStream(LOG_FILE_PATH, {
+        start: lastSize,
+        end: stats.size,
+        encoding: "utf8"
+      });
 
-        stream.on("data", (chunk) => {
-          console.log("🔹 New Log Entry Sent:", chunk.trim());
-          res.write(chunk); // Send new logs to the client
-        });
+      stream.on("data", (chunk) => {
+        console.log("📝 Sending new log:", chunk.trim());
+        res.write(chunk);
+      });
 
-        stream.on("end", () => {
-          lastFileSize = stats.size; // Update last read position
-        });
-      }
+      stream.on("end", () => {
+        lastSize = stats.size;
+      });
     });
-  }
-
-  // Use `fs.watch` instead of `fs.watchFile` to reduce duplicate triggers
-  const watcher = fs.watch(LOG_FILE_PATH, sendNewLines);
+  }, 1000);
 
   req.on("close", () => {
-    console.log("❌ Client disconnected from /get-log-updates");
-    watcher.close(); // Stop watching file
+    console.log("❌ Client disconnected");
+    clearInterval(interval);
     res.end();
   });
 });
@@ -574,7 +577,7 @@ app.post("/testcase-results", verifyToken, async (req, res) => {
       const docFileName = `${test.Testname.replace(/\s+/g, "_")}.docx`;
       const docFilePath = path.join(DOCUMENTS_FOLDER, docFileName);
       const docDownloadURL = `http://34.93.231.170:${port}/documents/${docFileName}`;
-      const currentDateTime = new Date().toLocaleString();
+      const currentDateTime = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
       console.log(currentDateTime + " " + test.status + " " + test.error);
       console.log(testScriptName);
       console.log("Execution Status:", test);
