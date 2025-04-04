@@ -9,6 +9,7 @@ import userConfig from "./config/user.config.js";
 import multer from "multer";
 import xlsx from "xlsx";
 import path from "path";
+import compression from "compression";
 import { fileURLToPath } from "url";
 import { Document, Packer, Paragraph, TextRun, ImageRun, AlignmentType } from "docx";
  
@@ -23,6 +24,7 @@ if (!fs.existsSync(DOCUMENTS_FOLDER)) {
 // Serve documents folder for downloads
 app.use("/documents", express.static(DOCUMENTS_FOLDER));
 app.use(cors());
+app.use(compression({ flush: require('zlib').constants.Z_SYNC_FLUSH }));
 app.use(bodyParser.json());
 // Fix __dirname in ES Module
 const __filename = fileURLToPath(import.meta.url);
@@ -40,14 +42,21 @@ function isEmptyObject(obj) {
 let lastFileSize = 0; // Stores last read file position
 
 app.get("/get-log-updates", (req, res) => {
-  res.setHeader("Content-Type", "text/plain");
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
   res.setHeader("Transfer-Encoding", "chunked");
+  res.setHeader("Cache-Control", "no-cache");
+  res.setHeader("X-Content-Type-Options", "nosniff");
 
-  console.log("📡 Client connected to /get-log-updates");
+  // Some platforms need explicit flushing
+  const flush = () => {
+    if (res.flush) res.flush();
+  };
 
   let lastSize = 0;
 
-  // Send any existing content first
+  console.log("📡 Client connected for live log stream");
+
+  // Send existing logs first
   fs.stat(LOG_FILE_PATH, (err, stats) => {
     if (!err && stats.size > 0) {
       const stream = fs.createReadStream(LOG_FILE_PATH, {
@@ -58,12 +67,13 @@ app.get("/get-log-updates", (req, res) => {
 
       stream.on("data", (chunk) => {
         res.write(chunk);
+        flush(); // force flush to client
         lastSize = stats.size;
       });
     }
   });
 
-  // Watch for new additions
+  // Periodically send new chunks
   const interval = setInterval(() => {
     fs.stat(LOG_FILE_PATH, (err, stats) => {
       if (err || stats.size <= lastSize) return;
@@ -75,8 +85,8 @@ app.get("/get-log-updates", (req, res) => {
       });
 
       stream.on("data", (chunk) => {
-        console.log("📝 Sending new log:", chunk.trim());
         res.write(chunk);
+        flush(); // flush after each chunk
       });
 
       stream.on("end", () => {
@@ -86,14 +96,11 @@ app.get("/get-log-updates", (req, res) => {
   }, 1000);
 
   req.on("close", () => {
-    console.log("❌ Client disconnected");
+    console.log("❌ Log stream closed");
     clearInterval(interval);
     res.end();
   });
 });
-
-
-
 
 // Login API to issue JWT token
 app.post("/login", (req, res) => {
