@@ -12,7 +12,7 @@ import path from "path";
 import compression from "compression";
 import { fileURLToPath } from "url";
 import { Document, Packer, Paragraph, TextRun, ImageRun, AlignmentType } from "docx";
- 
+import { constants as zlibConstants } from 'zlib';
  
 const app = express();
 const port = 3000;
@@ -24,7 +24,7 @@ if (!fs.existsSync(DOCUMENTS_FOLDER)) {
 // Serve documents folder for downloads
 app.use("/documents", express.static(DOCUMENTS_FOLDER));
 app.use(cors());
-app.use(compression({ flush: require('zlib').constants.Z_SYNC_FLUSH }));
+app.use(compression({ flush: zlibConstants.Z_SYNC_FLUSH }));
 app.use(bodyParser.json());
 // Fix __dirname in ES Module
 const __filename = fileURLToPath(import.meta.url);
