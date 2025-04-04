@@ -103,31 +103,50 @@ function isEmptyObject(obj) {
 // });
 let clients = [];
 
-app.get("/get-log-updates", (req, res) => {
-  console.log("✅ Client connected for SSE");
-
-  res.setHeader("Content-Type", "text/event-stream");
-  res.setHeader("Cache-Control", "no-cache");
-  res.setHeader("Connection", "keep-alive");
-  res.flushHeaders();
-
-  clients.push(res);
-
-  const watcher = fs.watch(LOG_FILE_PATH, { persistent: true }, () => {
-    const logData = fs.readFileSync(LOG_FILE_PATH, "utf-8").trim().split("\n");
-    const lastLine = logData[logData.length - 1];
-    console.log("🔹 Sending log via SSE:", lastLine);
-    res.write(`data: ${lastLine}\n\n`);
+// SSE endpoint
+app.get('/get-log-updates', (req, res) => {
+  res.set({
+    'Content-Type': 'text/event-stream',
+    'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive',
   });
 
-  req.on("close", () => {
-    console.log("❌ Client disconnected from SSE");
-    clients = clients.filter((c) => c !== res);
-    watcher.close();
+  const logFilePath = './automation/logs.txt';
+  let lastSize = 0;
+
+  // Initial size
+  try {
+    lastSize = fs.statSync(logFilePath).size;
+  } catch {}
+
+  const interval = setInterval(() => {
+    fs.stat(logFilePath, (err, stats) => {
+      if (err || stats.size <= lastSize) return;
+
+      const stream = fs.createReadStream(logFilePath, {
+        start: lastSize,
+        end: stats.size,
+      });
+
+      stream.on('data', (chunk) => {
+        const data = chunk.toString().trim().split('\n');
+        data.forEach(line => {
+          // Optional filter
+          if (/^\d{4}-\d{2}-\d{2}T/.test(line)) {
+            res.write(`data: ${line}\n\n`);
+          }
+        });
+      });
+
+      lastSize = stats.size;
+    });
+  }, 1000);
+
+  req.on('close', () => {
+    clearInterval(interval);
     res.end();
   });
 });
-
 
 // Login API to issue JWT token
 app.post("/login", (req, res) => {

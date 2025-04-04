@@ -92,6 +92,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
     };
   }
   
+  
 
   fileName: string | null = null;
   fileUrl: string | null = null;
