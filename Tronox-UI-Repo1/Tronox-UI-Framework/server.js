@@ -39,67 +39,97 @@ function isEmptyObject(obj) {
   return obj && typeof obj === "object" && Object.keys(obj).length === 0;
 }
  
-let lastFileSize = 0; // Stores last read file position
+// let lastFileSize = 0; // Stores last read file position
+
+// app.get("/get-log-updates", (req, res) => {
+//   res.setHeader("Content-Type", "text/plain; charset=utf-8");
+//   res.setHeader("Transfer-Encoding", "chunked");
+//   res.setHeader("Cache-Control", "no-cache");
+//   res.setHeader("X-Content-Type-Options", "nosniff");
+
+//   // Some platforms need explicit flushing
+//   const flush = () => {
+//     if (res.flush) res.flush();
+//   };
+
+//   let lastSize = 0;
+
+//   console.log("📡 Client connected for live log stream");
+
+//   // Send existing logs first
+//   fs.stat(LOG_FILE_PATH, (err, stats) => {
+//     if (!err && stats.size > 0) {
+//       const stream = fs.createReadStream(LOG_FILE_PATH, {
+//         start: 0,
+//         end: stats.size,
+//         encoding: "utf8"
+//       });
+
+//       stream.on("data", (chunk) => {
+//         res.write(chunk);
+//         flush(); // force flush to client
+//         lastSize = stats.size;
+//       });
+//     }
+//   });
+
+//   // Periodically send new chunks
+//   const interval = setInterval(() => {
+//     fs.stat(LOG_FILE_PATH, (err, stats) => {
+//       if (err || stats.size <= lastSize) return;
+
+//       const stream = fs.createReadStream(LOG_FILE_PATH, {
+//         start: lastSize,
+//         end: stats.size,
+//         encoding: "utf8"
+//       });
+
+//       stream.on("data", (chunk) => {
+//         res.write(chunk);
+//         flush(); // flush after each chunk
+//       });
+
+//       stream.on("end", () => {
+//         lastSize = stats.size;
+//       });
+//     });
+//   }, 1000);
+
+//   req.on("close", () => {
+//     console.log("❌ Log stream closed");
+//     clearInterval(interval);
+//     res.end();
+//   });
+// });
+let clients = [];
 
 app.get("/get-log-updates", (req, res) => {
-  res.setHeader("Content-Type", "text/plain; charset=utf-8");
-  res.setHeader("Transfer-Encoding", "chunked");
+  console.log("✅ Client connected for SSE");
+
+  res.setHeader("Content-Type", "text/event-stream");
   res.setHeader("Cache-Control", "no-cache");
-  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("Connection", "keep-alive");
+  res.flushHeaders();
 
-  // Some platforms need explicit flushing
-  const flush = () => {
-    if (res.flush) res.flush();
-  };
+  clients.push(res);
 
-  let lastSize = 0;
-
-  console.log("📡 Client connected for live log stream");
-
-  // Send existing logs first
-  fs.stat(LOG_FILE_PATH, (err, stats) => {
-    if (!err && stats.size > 0) {
-      const stream = fs.createReadStream(LOG_FILE_PATH, {
-        start: 0,
-        end: stats.size,
-        encoding: "utf8"
-      });
-
-      stream.on("data", (chunk) => {
-        res.write(chunk);
-        flush(); // force flush to client
-        lastSize = stats.size;
-      });
-    }
+  const watcher = fs.watch(LOG_FILE_PATH, { persistent: true }, () => {
+    const logData = fs.readFileSync(LOG_FILE_PATH, "utf-8").trim().split("\n");
+    const lastLine = logData[logData.length - 1];
+    console.log("🔹 Sending log via SSE:", lastLine);
+    res.write(`data: ${lastLine}\n\n`);
   });
-
-  // Periodically send new chunks
-  const interval = setInterval(() => {
-    fs.stat(LOG_FILE_PATH, (err, stats) => {
-      if (err || stats.size <= lastSize) return;
-
-      const stream = fs.createReadStream(LOG_FILE_PATH, {
-        start: lastSize,
-        end: stats.size,
-        encoding: "utf8"
-      });
-
-      stream.on("data", (chunk) => {
-        res.write(chunk);
-        flush(); // flush after each chunk
-      });
-
-      stream.on("end", () => {
-        lastSize = stats.size;
-      });
-    });
-  }, 1000);
 
   req.on("close", () => {
-    console.log("❌ Log stream closed");
-    clearInterval(interval);
+    console.log("❌ Client disconnected from SSE");
+    clients = clients.filter((c) => c !== res);
+    watcher.close();
     res.end();
   });
+});
+
+app.listen(port, () => {
+  console.log(`🚀 Server running on http://localhost:${port}`);
 });
 
 // Login API to issue JWT token

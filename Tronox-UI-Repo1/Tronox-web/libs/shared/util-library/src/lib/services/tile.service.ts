@@ -81,21 +81,42 @@ export class TileService {
     return this.http.post<any[]>(TEST_RESULTS, {}, { headers });
   }
 
-  getLogUpdates(): Observable<string> {
-    return new Observable<string>((observer) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", "http://34.93.231.170:3000/get-log-updates", true);
+  // getLogUpdates(): Observable<string> {
+  //   return new Observable<string>((observer) => {
+  //     const xhr = new XMLHttpRequest();
+  //     xhr.open("GET", "http://34.93.231.170:3000/get-log-updates", true);
   
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === 3) {
-          observer.next(xhr.responseText);
-        } else if (xhr.readyState === 4) {
-          observer.complete();
-        }
+  //     xhr.onreadystatechange = () => {
+  //       if (xhr.readyState === 3) {
+  //         observer.next(xhr.responseText);
+  //       } else if (xhr.readyState === 4) {
+  //         observer.complete();
+  //       }
+  //     };
+  
+  //     xhr.send();
+  //   });
+  // }
+  getLogUpdatesSSE(): Observable<string> {
+    return new Observable<string>((observer) => {
+      const eventSource = new EventSource("http://34.93.231.170:3000/get-log-updates");
+  
+      eventSource.onmessage = (event) => {
+        observer.next(event.data); // Push log line to subscriber
       };
   
-      xhr.send();
+      eventSource.onerror = (error) => {
+        console.error("❌ SSE connection error:", error);
+        eventSource.close();
+        observer.complete(); // Optionally complete or retry logic
+      };
+  
+      // Clean up
+      return () => {
+        eventSource.close();
+      };
     });
   }
+  
   
 }
