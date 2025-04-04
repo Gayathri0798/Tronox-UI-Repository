@@ -43,17 +43,17 @@
 
     <button mat-button mat-dialog-close [disabled]="isProcessing">Close</button>
   </div>
-  <!-- <div class="terminal">
+  <div class="terminal">
     <div *ngFor="let content of logContent" class="terminal-line">
       {{ content }}
     </div>
-  </div> -->
+  </div>
   <!-- Terminal log display box -->
-<div class="terminal" *ngIf="logContent.length > 0">
+<!-- <div class="terminal" *ngIf="logContent.length > 0">
   <div *ngFor="let line of logContent" class="terminal-line">
     {{ line }}
   </div>
-</div>
+</div> -->
 
   <!-- Conditionally Display Results -->
   <div *ngIf="testResults && testResults.length > 0; else noResults">

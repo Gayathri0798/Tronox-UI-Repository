@@ -39,110 +39,64 @@ function isEmptyObject(obj) {
   return obj && typeof obj === "object" && Object.keys(obj).length === 0;
 }
  
-// let lastFileSize = 0; // Stores last read file position
+let lastFileSize = 0; // Stores last read file position
 
-// app.get("/get-log-updates", (req, res) => {
-//   res.setHeader("Content-Type", "text/plain; charset=utf-8");
-//   res.setHeader("Transfer-Encoding", "chunked");
-//   res.setHeader("Cache-Control", "no-cache");
-//   res.setHeader("X-Content-Type-Options", "nosniff");
+app.get("/get-log-updates", (req, res) => {
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  res.setHeader("Transfer-Encoding", "chunked");
+  res.setHeader("Cache-Control", "no-cache");
+  res.setHeader("X-Content-Type-Options", "nosniff");
 
-//   // Some platforms need explicit flushing
-//   const flush = () => {
-//     if (res.flush) res.flush();
-//   };
+  // Some platforms need explicit flushing
+  const flush = () => {
+    if (res.flush) res.flush();
+  };
 
-//   let lastSize = 0;
-
-//   console.log("📡 Client connected for live log stream");
-
-//   // Send existing logs first
-//   fs.stat(LOG_FILE_PATH, (err, stats) => {
-//     if (!err && stats.size > 0) {
-//       const stream = fs.createReadStream(LOG_FILE_PATH, {
-//         start: 0,
-//         end: stats.size,
-//         encoding: "utf8"
-//       });
-
-//       stream.on("data", (chunk) => {
-//         res.write(chunk);
-//         flush(); // force flush to client
-//         lastSize = stats.size;
-//       });
-//     }
-//   });
-
-//   // Periodically send new chunks
-//   const interval = setInterval(() => {
-//     fs.stat(LOG_FILE_PATH, (err, stats) => {
-//       if (err || stats.size <= lastSize) return;
-
-//       const stream = fs.createReadStream(LOG_FILE_PATH, {
-//         start: lastSize,
-//         end: stats.size,
-//         encoding: "utf8"
-//       });
-
-//       stream.on("data", (chunk) => {
-//         res.write(chunk);
-//         flush(); // flush after each chunk
-//       });
-
-//       stream.on("end", () => {
-//         lastSize = stats.size;
-//       });
-//     });
-//   }, 1000);
-
-//   req.on("close", () => {
-//     console.log("❌ Log stream closed");
-//     clearInterval(interval);
-//     res.end();
-//   });
-// });
-let clients = [];
-
-// SSE endpoint
-app.get('/get-log-updates', (req, res) => {
-  res.set({
-    'Content-Type': 'text/event-stream',
-    'Cache-Control': 'no-cache',
-    'Connection': 'keep-alive',
-  });
-
-  const logFilePath = './automation/logs.txt';
   let lastSize = 0;
 
-  // Initial size
-  try {
-    lastSize = fs.statSync(logFilePath).size;
-  } catch {}
+  console.log("📡 Client connected for live log stream");
 
+  // Send existing logs first
+  fs.stat(LOG_FILE_PATH, (err, stats) => {
+    if (!err && stats.size > 0) {
+      const stream = fs.createReadStream(LOG_FILE_PATH, {
+        start: 0,
+        end: stats.size,
+        encoding: "utf8"
+      });
+
+      stream.on("data", (chunk) => {
+        res.write(chunk);
+        flush(); // force flush to client
+        lastSize = stats.size;
+      });
+    }
+  });
+
+  // Periodically send new chunks
   const interval = setInterval(() => {
-    fs.stat(logFilePath, (err, stats) => {
+    fs.stat(LOG_FILE_PATH, (err, stats) => {
       if (err || stats.size <= lastSize) return;
 
-      const stream = fs.createReadStream(logFilePath, {
+      const stream = fs.createReadStream(LOG_FILE_PATH, {
         start: lastSize,
         end: stats.size,
+        encoding: "utf8"
       });
 
-      stream.on('data', (chunk) => {
-        const data = chunk.toString().trim().split('\n');
-        data.forEach(line => {
-          // Optional filter
-          if (/^\d{4}-\d{2}-\d{2}T/.test(line)) {
-            res.write(`data: ${line}\n\n`);
-          }
-        });
+      stream.on("data", (chunk) => {
+        res.write(chunk);
+        flush(); // flush after each chunk
       });
 
-      lastSize = stats.size;
+      stream.on("end", () => {
+        lastSize = stats.size;
+      });
     });
   }, 1000);
 
-  req.on('close', () => {
+  req.on("close", () => {
+    console.log("❌ Log stream closed");
     clearInterval(interval);
     res.end();
   });

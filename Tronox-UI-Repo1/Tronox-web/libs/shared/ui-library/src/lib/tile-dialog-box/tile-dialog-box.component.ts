@@ -55,44 +55,29 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   ngOnInit(): void {
     this.logContent = [];
   }
-  // fetchLiveLogUpdates() {
-  //   fetch("http://34.93.231.170:3000/get-log-updates")
-  //     .then((response) => {
-  //       const reader = response.body?.getReader();
-  //       const decoder = new TextDecoder();
+  fetchLiveLogUpdates() {
+    fetch("http://34.93.231.170:3000/get-log-updates")
+      .then((response) => {
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
 
-  //       const read = () => {
-  //         reader?.read().then(({ value, done }) => {
-  //           if (done) {
-  //             console.log("✅ Log Streaming Finished");
-  //             return;
-  //           }
-  //           const newLog = decoder.decode(value);
-  //           console.log("🔹 Log Update Received:", newLog);
-  //           this.logContent.push(newLog);
-  //           read();
-  //         });
-  //       };
+        const read = () => {
+          reader?.read().then(({ value, done }) => {
+            if (done) {
+              console.log("✅ Log Streaming Finished");
+              return;
+            }
+            const newLog = decoder.decode(value);
+            console.log("🔹 Log Update Received:", newLog);
+            this.logContent.push(newLog);
+            read();
+          });
+        };
 
-  //       read();
-  //     })
-  //     .catch(console.error);
-  // }
-  startLogStream(): void {
-    const eventSource = new EventSource('http://34.93.231.170:3000/get-log-updates');
-  
-    eventSource.onmessage = (event) => {
-      console.log("🔹 Log update received:", event.data);
-      this.logContent.push(event.data);
-    };
-  
-    eventSource.onerror = (err) => {
-      console.error("❌ SSE error:", err);
-      eventSource.close();
-    };
+        read();
+      })
+      .catch(console.error);
   }
-  
-  
 
   fileName: string | null = null;
   fileUrl: string | null = null;
@@ -129,7 +114,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
     this.logContent = []; // Clear logs before starting new execution
 
      // Start log stream *before* execution
-    this.startLogStream();
+    // this.startLogStream();
     // Show terminal by adding class
     setTimeout(() => {
       const terminal = document.querySelector(".terminal");
@@ -160,7 +145,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
         complete: () => {
           console.log("✅ File processing complete");
           this.isProcessing = false;
-          // this.fetchLiveLogUpdates();
+          this.fetchLiveLogUpdates();
           // this.startLogStream();
           this.fetchTestResults();
         },
