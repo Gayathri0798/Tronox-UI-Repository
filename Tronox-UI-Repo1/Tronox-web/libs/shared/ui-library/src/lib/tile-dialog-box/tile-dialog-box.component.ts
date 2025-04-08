@@ -47,6 +47,8 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   hasResults = true;
   logs:any;
   logContent: any;
+  logInterval: any;
+  showTerminal = false;
   constructor(
     public dialogRef: MatDialogRef<TileDialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -55,29 +57,49 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   ngOnInit(): void {
     this.logContent = [];
   }
-  fetchLiveLogUpdates() {
-    fetch("http://34.93.231.170:3000/get-log-updates")
-      .then((response) => {
-        const reader = response.body?.getReader();
-        const decoder = new TextDecoder();
+  // fetchLiveLogUpdates() {
+  //   fetch("http://34.93.231.170:3000/get-log-updates")
+  //     .then((response) => {
+  //       const reader = response.body?.getReader();
+  //       const decoder = new TextDecoder();
 
-        const read = () => {
-          reader?.read().then(({ value, done }) => {
-            if (done) {
-              console.log("✅ Log Streaming Finished");
-              return;
-            }
-            const newLog = decoder.decode(value);
-            console.log("🔹 Log Update Received:", newLog);
-            this.logContent.push(newLog);
-            read();
-          });
-        };
+  //       const read = () => {
+  //         reader?.read().then(({ value, done }) => {
+  //           if (done) {
+  //             console.log("✅ Log Streaming Finished");
+  //             return;
+  //           }
+  //           const newLog = decoder.decode(value);
+  //           console.log("🔹 Log Update Received:", newLog);
+  //           this.logContent.push(newLog);
+  //           read();
+  //         });
+  //       };
 
-        read();
-      })
-      .catch(console.error);
+  //       read();
+  //     })
+  //     .catch(console.error);
+  // }
+  startLogPolling(): void {
+    this.logInterval = setInterval(() => {
+      this.tileService.getLogUpdates().subscribe({
+        next: (data: string) => {
+          const lines = data.split('\n').filter(line => line.trim() !== '');
+          this.logContent.push(...lines); // Append new lines
+          console.log("📥 New log lines:", lines);
+        },
+        error: (err) => {
+          console.error("❌ Error fetching log content:", err);
+        }
+      });
+    }, 5000); // Poll every 10 seconds
   }
+  
+  stopLogPolling(): void {
+    if (this.logInterval) {
+      clearInterval(this.logInterval);
+    }
+  }    
 
   fileName: string | null = null;
   fileUrl: string | null = null;
@@ -112,16 +134,19 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
     this.wordFileBlob = null;
     this.result = ''; // Clear previous results
     this.logContent = []; // Clear logs before starting new execution
+    this.showTerminal = true;
+    // Start polling logs
+    this.startLogPolling();
 
      // Start log stream *before* execution
     // this.startLogStream();
     // Show terminal by adding class
-    setTimeout(() => {
-      const terminal = document.querySelector(".terminal");
-      if (terminal) {
-        terminal.classList.add("terminal-active");
-      }
-    }, 100);
+    // setTimeout(() => {
+    //   const terminal = document.querySelector(".terminal");
+    //   if (terminal) {
+    //     terminal.classList.add("terminal-active");
+    //   }
+    // }, 0);
   
     this.tileService.uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec)
       .subscribe({
@@ -145,7 +170,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
         complete: () => {
           console.log("✅ File processing complete");
           this.isProcessing = false;
-          this.fetchLiveLogUpdates();
+          // this.fetchLiveLogUpdates();
           // this.startLogStream();
           this.fetchTestResults();
         },

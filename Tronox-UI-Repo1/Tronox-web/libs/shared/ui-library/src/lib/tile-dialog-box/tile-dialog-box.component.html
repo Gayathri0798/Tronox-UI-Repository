@@ -43,11 +43,24 @@
 
     <button mat-button mat-dialog-close [disabled]="isProcessing">Close</button>
   </div>
-  <div class="terminal">
+  <!-- <div class="terminal">
     <div *ngFor="let content of logContent" class="terminal-line">
       {{ content }}
     </div>
+  </div> -->
+  <!-- Log viewer section -->
+  <div class="terminal terminal-active" *ngIf="showTerminal">
+    <h3>Test Step Logs</h3>
+    <div class="log-output" #resultsContainer>
+      <ng-container *ngIf="logContent.length > 0; else loadingLogs">
+        <pre *ngFor="let log of logContent">{{ log }}</pre>
+      </ng-container>
+      <ng-template #loadingLogs>
+        <p>Waiting for logs...</p>
+      </ng-template>
+    </div>
   </div>
+  
   <!-- Terminal log display box -->
 <!-- <div class="terminal" *ngIf="logContent.length > 0">
   <div *ngFor="let line of logContent" class="terminal-line">

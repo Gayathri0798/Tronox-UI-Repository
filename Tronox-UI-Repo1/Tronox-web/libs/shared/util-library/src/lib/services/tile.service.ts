@@ -15,6 +15,12 @@ import {
 export class TileService {
   constructor(private http: HttpClient) {}
 
+  getLogUpdates() {
+    return this.http.get('http://34.93.231.170:3000/get-log-updates', {
+      responseType: 'text'
+    });
+  }
+
   getTiles(): Observable<any> {
     const headers = this.setHeaders();
     return this.http.get<any>(GET_TILES, { headers });
@@ -81,21 +87,22 @@ export class TileService {
     return this.http.post<any[]>(TEST_RESULTS, {}, { headers });
   }
 
-  getLogUpdates(): Observable<string> {
-    return new Observable<string>((observer) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", "http://34.93.231.170:3000/get-log-updates", true);
+  // getLogUpdates(): Observable<string> {
+  //   return new Observable<string>((observer) => {
+  //     const xhr = new XMLHttpRequest();
+  //     xhr.open("GET", "http://34.93.231.170:3000/get-log-updates", true);
   
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === 3) {
-          observer.next(xhr.responseText);
-        } else if (xhr.readyState === 4) {
-          observer.complete();
-        }
-      };
+  //     xhr.onreadystatechange = () => {
+  //       if (xhr.readyState === 3) {
+  //         observer.next(xhr.responseText);
+  //       } else if (xhr.readyState === 4) {
+  //         observer.complete();
+  //       }
+  //     };
   
-      xhr.send();
-    });
-  }
+  //     xhr.send();
+  //   });
+  // }
+
   
 }
