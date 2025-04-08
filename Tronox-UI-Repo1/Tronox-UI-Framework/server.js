@@ -356,6 +356,7 @@ app.post(
   verifyToken,
   upload.single("file"),
   (req, res) => {
+    fs.writeFileSync(logFilePath, '', 'utf8'); 
     res.setHeader("Content-Type", "text/plain");
     res.setHeader("Transfer-Encoding", "chunked");
  
