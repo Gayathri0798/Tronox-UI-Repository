@@ -6,6 +6,7 @@ dataset=dataset.default;
 const Base = new BasePage();
 import fs from 'fs';
 const logFilePath = './testStepsLog.txt';
+fs.writeFileSync(logFilePath, "");
 describe('Create Create Maintenance Notification and Order', () => {
 
   fs.writeFileSync(logFilePath, "", "utf8");
