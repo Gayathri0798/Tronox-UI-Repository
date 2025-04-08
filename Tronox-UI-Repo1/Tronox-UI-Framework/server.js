@@ -40,15 +40,13 @@ function isEmptyObject(obj) {
 }
  
 // Latest code for GCP- Gayathri
-let lastReadPosition = 0;
-
-app.get('/get-log-updates', (req, res) => {
+app.get('/get-log', (req, res) => {
   fs.readFile(LOG_FILE_PATH, 'utf8', (err, data) => {
     if (err) {
-      console.error('Failed to read log file:', err);
-      return res.status(500).send('Error reading log file.');
+      console.error("Error reading log file:", err);
+      return res.status(500).send("Error reading log file.");
     }
-    res.send(data); // Send entire log content as plain text
+    res.send(data);
   });
 });
 
@@ -138,8 +136,8 @@ app.get("/api/tiles", verifyToken, (req, res) => {
 let testScriptName = "";
 const logFilePath = './testStepsLog.txt';
 app.post("/testcase-exec", verifyToken, upload.single("file"), (req, res) => {
-  fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
-  lastReadPosition = 0;
+  // fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
+  // lastReadPosition = 0;
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
   }
@@ -270,8 +268,8 @@ app.post(
   verifyToken,
   upload.single("file"),
   (req, res) => {
-    fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
-    lastReadPosition = 0;
+    // fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
+    // lastReadPosition = 0;
     res.setHeader("Content-Type", "text/plain");
     res.setHeader("Transfer-Encoding", "chunked");
  
@@ -528,8 +526,8 @@ app.post(
 // Gayatri code
  
 app.post("/testcase-results", verifyToken, async (req, res) => {
-  fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
-  lastReadPosition = 0;
+  // fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
+  // lastReadPosition = 0;
   const rawData = fs.readFileSync(resultsFilePath, "utf-8");
   const testResults = JSON.parse(rawData);
 

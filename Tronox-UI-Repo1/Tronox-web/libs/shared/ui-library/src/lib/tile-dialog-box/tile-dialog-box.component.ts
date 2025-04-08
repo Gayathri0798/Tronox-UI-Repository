@@ -4,6 +4,7 @@ import {
   ElementRef,
   inject,
   Inject,
+  OnDestroy,
   OnInit,
   ViewChild,
 } from '@angular/core';
@@ -44,13 +45,13 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './tile-dialog-box.component.html',
   styleUrl: './tile-dialog-box.component.scss',
 })
-export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
+export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestroy {
   hasResults = true;
   logs:any;
   logContent: any;
   logInterval: any;
-  showTerminal = false;
-  logLines: string[] = [];
+  terminalVisible = false;
+  terminalOutput: string[] = [];
   constructor(
     public dialogRef: MatDialogRef<TileDialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -58,69 +59,27 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
     private http: HttpClient
   ) {}
   ngOnInit(): void {
-    this.getLogs(); // Fetch logs when the component loads
+    this.logInterval = setInterval(() => this.getLogs(), 10000);
   }
-  getLogs() {
-    this.http.get('/get-log-updates', { responseType: 'text' }).subscribe({
-      next: (data) => {
-        this.logLines = data.split('\n');
+
+  ngOnDestroy(): void {
+    if (this.logInterval) clearInterval(this.logInterval);
+  }
+
+  getLogs(): void {
+    this.http.get('http://34.93.231.170:3000/get-log', { responseType: 'text' }).subscribe({
+      next: (data: string) => {
+        this.terminalOutput = data.split('\n').filter(line => line.trim() !== '');
+        setTimeout(() => {
+          const terminal = document.querySelector('.terminal');
+          if (terminal) terminal.scrollTop = terminal.scrollHeight;
+        }, 100);
       },
       error: (err) => {
-        console.error('Error fetching logs:', err);
+        console.error('❌ Failed to fetch logs:', err);
       }
     });
   }
-  // fetchLiveLogUpdates() {
-  //   fetch("http://34.93.231.170:3000/get-log-updates")
-  //     .then((response) => {
-  //       const reader = response.body?.getReader();
-  //       const decoder = new TextDecoder();
-
-  //       const read = () => {
-  //         reader?.read().then(({ value, done }) => {
-  //           if (done) {
-  //             console.log("✅ Log Streaming Finished");
-  //             return;
-  //           }
-  //           const newLog = decoder.decode(value);
-  //           console.log("🔹 Log Update Received:", newLog);
-  //           this.logContent.push(newLog);
-  //           read();
-  //         });
-  //       };
-
-  //       read();
-  //     })
-  //     .catch(console.error);
-  // }
-
-  // startLogPolling(): void {
-  //   this.showTerminal = true; // show terminal immediately
-  
-  //   this.logInterval = setInterval(() => {
-  //     this.tileService.getLogUpdates().subscribe({
-  //       next: (data: string) => {
-  //         const lines = data.split('\n').filter(line => line.trim() !== '');
-  
-  //         // Only take new lines that weren't shown before
-  //         const newLines = lines.slice(this.lastLogLength);
-  
-  //         if (newLines.length > 0) {
-  //           this.logContent.push(...newLines);
-  //           console.log(" New log lines:", newLines);
-  //         } else {
-  //           console.log(" No new log lines.");
-  //         }
-  
-  //         this.lastLogLength = lines.length; // Update pointer
-  //       },
-  //       error: (err) => {
-  //         console.error("Error fetching log content:", err);
-  //       }
-  //     });
-  //   }, 10000);
-  // }
-  
    
 
   fileName: string | null = null;
@@ -151,40 +110,30 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
 
   runScript(): void {
     if (!this.file) return;
-  
+
     this.isProcessing = true;
-    this.wordFileBlob = null;
-    this.result = ''; // Clear previous results
-    this.logContent = []; // Clear logs before starting new execution
-    this.showTerminal = true;
-  
-    this.tileService.uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec)
-      .subscribe({
-        next: (chunk) => {
-          console.log('🔹 Raw Chunk Received:', chunk);
-  
-          // Regex to match only logs in the format: "YYYY-MM-DDTHH:mm:ss.SSSZ - Testcase failed at ..."
-          const logPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z - Testcase failed at .+$/gm;
-          const filteredLines = chunk.match(logPattern) || []; // Extract valid log lines
-  
-          if (filteredLines.length > 0) {
-            this.logContent.push(...filteredLines);
-            console.log('✅ Filtered Log Entries:', filteredLines);
-          }
-        },
-        error: (error) => {
-          console.error("❌ Error uploading file:", error);
-          this.isProcessing = false;
-          this.fetchTestResults();
-        },
-        complete: () => {
-          console.log("✅ File processing complete");
-          this.isProcessing = false;
-          // this.fetchLiveLogUpdates();
-          // this.startLogStream();
-          this.fetchTestResults();
-        },
-      });
+    this.terminalOutput = []; // clear logs
+    this.terminalVisible = true;
+    this.getLogs(); // initial log fetch
+
+    this.tileService.uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec).subscribe({
+      next: (chunk) => {
+        const logPattern = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z - Testcase failed at .+$/gm;
+        const filteredLines = chunk.match(logPattern) || [];
+        if (filteredLines.length > 0) {
+          this.terminalOutput.push(...filteredLines);
+        }
+      },
+      error: (error) => {
+        console.error("❌ Error uploading file:", error);
+        this.isProcessing = false;
+        this.fetchTestResults();
+      },
+      complete: () => {
+        this.isProcessing = false;
+        this.fetchTestResults();
+      }
+    });
   }
 
   fetchTestResults() {

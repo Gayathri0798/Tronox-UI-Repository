@@ -20,6 +20,9 @@ export class TileService {
       responseType: 'text'
     });
   }
+  getLogs() {
+    return this.http.get('http://34.93.231.170:3000/get-log', { responseType: 'text' });
+  }
 
   getTiles(): Observable<any> {
     const headers = this.setHeaders();
