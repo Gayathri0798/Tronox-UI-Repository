@@ -49,15 +49,9 @@
     </div>
   </div> -->
   <!-- Log viewer section -->
-  <div class="terminal terminal-active" *ngIf="showTerminal">
-    <h3>Test Step Logs</h3>
-    <div class="log-output" #resultsContainer>
-      <ng-container *ngIf="logContent.length > 0; else loadingLogs">
-        <pre *ngFor="let log of logContent">{{ log }}</pre>
-      </ng-container>
-      <ng-template #loadingLogs>
-        <p>Waiting for logs...</p>
-      </ng-template>
+  <div *ngIf="showTerminal" class="terminal-box">
+    <div *ngFor="let line of logLines">
+      {{ line }}
     </div>
   </div>
   

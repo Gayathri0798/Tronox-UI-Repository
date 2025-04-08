@@ -26,6 +26,7 @@ import { TestResultDialogComponent } from '../test-result-dialog/test-result-dia
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'lib-tile-dialog-box',
   imports: [
@@ -49,13 +50,25 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   logContent: any;
   logInterval: any;
   showTerminal = false;
+  logLines: string[] = [];
   constructor(
     public dialogRef: MatDialogRef<TileDialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private readonly tileService: TileService
+    private readonly tileService: TileService,
+    private http: HttpClient
   ) {}
   ngOnInit(): void {
-    this.logContent = [];
+    this.getLogs(); // Fetch logs when the component loads
+  }
+  getLogs() {
+    this.http.get('/get-log-updates', { responseType: 'text' }).subscribe({
+      next: (data) => {
+        this.logLines = data.split('\n');
+      },
+      error: (err) => {
+        console.error('Error fetching logs:', err);
+      }
+    });
   }
   // fetchLiveLogUpdates() {
   //   fetch("http://34.93.231.170:3000/get-log-updates")
@@ -80,41 +93,35 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   //     })
   //     .catch(console.error);
   // }
-  lastLogLength = 0; // Track how many lines were shown last time
 
-  startLogPolling(): void {
-    this.showTerminal = true; // show terminal immediately
+  // startLogPolling(): void {
+  //   this.showTerminal = true; // show terminal immediately
   
-    this.logInterval = setInterval(() => {
-      this.tileService.getLogUpdates().subscribe({
-        next: (data: string) => {
-          const lines = data.split('\n').filter(line => line.trim() !== '');
+  //   this.logInterval = setInterval(() => {
+  //     this.tileService.getLogUpdates().subscribe({
+  //       next: (data: string) => {
+  //         const lines = data.split('\n').filter(line => line.trim() !== '');
   
-          // Only take new lines that weren't shown before
-          const newLines = lines.slice(this.lastLogLength);
+  //         // Only take new lines that weren't shown before
+  //         const newLines = lines.slice(this.lastLogLength);
   
-          if (newLines.length > 0) {
-            this.logContent.push(...newLines);
-            console.log(" New log lines:", newLines);
-          } else {
-            console.log(" No new log lines.");
-          }
+  //         if (newLines.length > 0) {
+  //           this.logContent.push(...newLines);
+  //           console.log(" New log lines:", newLines);
+  //         } else {
+  //           console.log(" No new log lines.");
+  //         }
   
-          this.lastLogLength = lines.length; // Update pointer
-        },
-        error: (err) => {
-          console.error("Error fetching log content:", err);
-        }
-      });
-    }, 10000);
-  }
+  //         this.lastLogLength = lines.length; // Update pointer
+  //       },
+  //       error: (err) => {
+  //         console.error("Error fetching log content:", err);
+  //       }
+  //     });
+  //   }, 10000);
+  // }
   
-  
-  stopLogPolling(): void {
-    if (this.logInterval) {
-      clearInterval(this.logInterval);
-    }
-  }    
+   
 
   fileName: string | null = null;
   fileUrl: string | null = null;
@@ -150,18 +157,6 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
     this.result = ''; // Clear previous results
     this.logContent = []; // Clear logs before starting new execution
     this.showTerminal = true;
-    // Start polling logs
-    this.startLogPolling();
-
-     // Start log stream *before* execution
-    // this.startLogStream();
-    // Show terminal by adding class
-    // setTimeout(() => {
-    //   const terminal = document.querySelector(".terminal");
-    //   if (terminal) {
-    //     terminal.classList.add("terminal-active");
-    //   }
-    // }, 0);
   
     this.tileService.uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec)
       .subscribe({

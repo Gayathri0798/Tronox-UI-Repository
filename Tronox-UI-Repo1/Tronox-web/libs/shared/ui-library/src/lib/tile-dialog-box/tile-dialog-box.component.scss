@@ -212,3 +212,17 @@ mat-spinner {
   background-color: #1e1e1e;
   border: 1px solid #333;
 }
+
+.terminal-box {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 1rem;
+  border-radius: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+}
+

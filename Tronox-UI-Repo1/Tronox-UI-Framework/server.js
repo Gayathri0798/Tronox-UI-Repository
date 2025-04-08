@@ -39,103 +39,16 @@ function isEmptyObject(obj) {
   return obj && typeof obj === "object" && Object.keys(obj).length === 0;
 }
  
-// let lastFileSize = 0; // Stores last read file position
-
-// app.get("/get-log-updates", (req, res) => {
-//   res.setHeader("Content-Type", "text/plain; charset=utf-8");
-//   res.setHeader("Transfer-Encoding", "chunked");
-//   res.setHeader("Cache-Control", "no-cache");
-//   res.setHeader("X-Content-Type-Options", "nosniff");
-
-//   // Some platforms need explicit flushing
-//   const flush = () => {
-//     if (res.flush) res.flush();
-//   };
-
-//   let lastSize = 0;
-
-//   console.log("📡 Client connected for live log stream");
-
-//   // Send existing logs first
-//   fs.stat(LOG_FILE_PATH, (err, stats) => {
-//     if (!err && stats.size > 0) {
-//       const stream = fs.createReadStream(LOG_FILE_PATH, {
-//         start: 0,
-//         end: stats.size,
-//         encoding: "utf8"
-//       });
-
-//       stream.on("data", (chunk) => {
-//         res.write(chunk);
-//         flush(); // force flush to client
-//         lastSize = stats.size;
-//       });
-//     }
-//   });
-
-//   // Periodically send new chunks
-//   const interval = setInterval(() => {
-//     fs.stat(LOG_FILE_PATH, (err, stats) => {
-//       if (err || stats.size <= lastSize) return;
-
-//       const stream = fs.createReadStream(LOG_FILE_PATH, {
-//         start: lastSize,
-//         end: stats.size,
-//         encoding: "utf8"
-//       });
-
-//       stream.on("data", (chunk) => {
-//         res.write(chunk);
-//         flush(); // flush after each chunk
-//       });
-
-//       stream.on("end", () => {
-//         lastSize = stats.size;
-//       });
-//     });
-//   }, 1000);
-
-//   req.on("close", () => {
-//     console.log("❌ Log stream closed");
-//     clearInterval(interval);
-//     res.end();
-//   });
-// });
 // Latest code for GCP- Gayathri
 let lastReadPosition = 0;
 
 app.get('/get-log-updates', (req, res) => {
-  fs.stat(LOG_FILE_PATH, (err, stats) => {
+  fs.readFile(LOG_FILE_PATH, 'utf8', (err, data) => {
     if (err) {
-      console.error(" Error stating log file:", err);
-      return res.status(500).send("Error accessing log file.");
+      console.error('Failed to read log file:', err);
+      return res.status(500).send('Error reading log file.');
     }
-
-    const newSize = stats.size;
-
-    if (newSize === lastReadPosition) {
-      return res.send(''); // No new logs
-    }
-
-    const stream = fs.createReadStream(LOG_FILE_PATH, {
-      start: lastReadPosition,
-      end: newSize
-    });
-
-    let newLogs = '';
-    stream.on('data', chunk => {
-      newLogs += chunk;
-    });
-
-    stream.on('end', () => {
-      lastReadPosition = newSize;
-      res.send(newLogs);
-    });
-
-    stream.on('error', (error) => {
-      console.error(" Stream error:", error);
-      res.status(500).send("Error streaming log file.");
-    });
+    res.send(data); // Send entire log content as plain text
   });
 });
 
