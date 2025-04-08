@@ -80,20 +80,35 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit {
   //     })
   //     .catch(console.error);
   // }
+  lastLogLength = 0; // Track how many lines were shown last time
+
   startLogPolling(): void {
+    this.showTerminal = true; // show terminal immediately
+  
     this.logInterval = setInterval(() => {
       this.tileService.getLogUpdates().subscribe({
         next: (data: string) => {
           const lines = data.split('\n').filter(line => line.trim() !== '');
-          this.logContent.push(...lines); // Append new lines
-          console.log("📥 New log lines:", lines);
+  
+          // Only take new lines that weren't shown before
+          const newLines = lines.slice(this.lastLogLength);
+  
+          if (newLines.length > 0) {
+            this.logContent.push(...newLines);
+            console.log(" New log lines:", newLines);
+          } else {
+            console.log(" No new log lines.");
+          }
+  
+          this.lastLogLength = lines.length; // Update pointer
         },
         error: (err) => {
-          console.error("❌ Error fetching log content:", err);
+          console.error("Error fetching log content:", err);
         }
       });
-    }, 5000); // Poll every 10 seconds
+    }, 10000);
   }
+  
   
   stopLogPolling(): void {
     if (this.logInterval) {
