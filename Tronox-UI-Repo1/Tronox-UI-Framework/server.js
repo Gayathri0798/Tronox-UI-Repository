@@ -26,11 +26,11 @@ app.use("/documents", express.static(DOCUMENTS_FOLDER));
 app.use(cors());
 app.use(compression({ flush: zlibConstants.Z_SYNC_FLUSH }));
 app.use(bodyParser.json());
-fs.writeFileSync(logFilePath, "", "utf8"); // Clear on startup
 // Fix __dirname in ES Module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const LOG_FILE_PATH = path.join(__dirname, "testStepsLog.txt");
+fs.writeFileSync(LOG_FILE_PATH, "", "utf8"); // Clear on startup
  
 // Serve static files from "public" folder
 app.use(express.static(path.join(__dirname, "public")));
