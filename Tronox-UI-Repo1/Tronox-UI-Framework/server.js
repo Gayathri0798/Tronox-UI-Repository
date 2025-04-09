@@ -51,6 +51,13 @@ app.get('/get-log', (req, res) => {
   });
 });
 
+// API 2: Get live logs
+app.get("/get-logs", (req, res) => {
+  if (!fs.existsSync(LOG_FILE_PATH)) return res.send("");
+  const logs = fs.readFileSync(LOG_FILE_PATH, "utf-8");
+  res.send(logs);
+});
+
 // Clear log file endpoint
 app.post('/clear-log', (req, res) => {
   fs.writeFile(logFilePath, '', 'utf8', (err) => {

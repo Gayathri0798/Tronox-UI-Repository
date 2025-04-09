@@ -59,6 +59,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
     private http: HttpClient
   ) {}
   ngOnInit(): void {
+    // Display the logs every 10 seconds
     this.logInterval = setInterval(() => this.getLogs(), 10000);
   }
 
@@ -66,6 +67,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
     if (this.logInterval) clearInterval(this.logInterval);
   }
 
+  // Helps to display the logs
   getLogs(): void {
     this.http.get('http://34.93.231.170:3000/get-log', { responseType: 'text' }).subscribe({
       next: (data: string) => {
@@ -81,6 +83,14 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
     });
   }
    
+  // Polling logs
+  startPollingLogs() {
+    this.logInterval = setInterval(() => {
+      this.http.get('/get-logs', { responseType: 'text' }).subscribe(data => {
+        this.logs = data;
+      });
+    }, 3000);
+  }
   clearLogs(): void {
     this.tileService.clearLogFile().subscribe({
       next: () => {
@@ -128,7 +138,8 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
     this.isProcessing = true;
     this.terminalOutput = []; // clear logs
     this.terminalVisible = true;
-    this.getLogs(); // initial log fetch
+    // this.getLogs(); // initial log fetch
+    this.startPollingLogs();
 
     this.tileService.uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec).subscribe({
       next: (chunk) => {

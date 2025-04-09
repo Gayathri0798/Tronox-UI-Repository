@@ -49,11 +49,14 @@
     </div>
   </div> -->
   <!-- Log viewer section -->
-  <div class="terminal" *ngIf="terminalVisible">
+  <!-- <div class="terminal" *ngIf="terminalVisible">
     <div *ngFor="let line of terminalOutput">
       {{ line }}
     </div>
-  </div>  
+  </div>   -->
+  <div class="log-terminal">
+    <pre>{{ logs }}</pre>
+  </div>
   
   <!-- Terminal log display box -->
 <!-- <div class="terminal" *ngIf="logContent.length > 0">
