@@ -81,7 +81,19 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
     });
   }
    
-
+  clearLogs(): void {
+    this.tileService.clearLogFile().subscribe({
+      next: () => {
+        console.log(' Logs cleared successfully');
+        this.logContent = []; // Clear log data in UI
+      },
+      error: (err) => {
+        console.error('Failed to clear logs:', err);
+      }
+    });
+  }
+  
+  
   fileName: string | null = null;
   fileUrl: string | null = null;
   fileUploaded = false;
@@ -111,6 +123,8 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
   runScript(): void {
     if (!this.file) return;
 
+    //Clear logs after test completes
+    this.clearLogs();
     this.isProcessing = true;
     this.terminalOutput = []; // clear logs
     this.terminalVisible = true;

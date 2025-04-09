@@ -23,6 +23,9 @@ export class TileService {
   getLogs() {
     return this.http.get('http://34.93.231.170:3000/get-log', { responseType: 'text' });
   }
+  clearLogFile(): Observable<any> {
+    return this.http.post('http://34.93.231.170:3000/clear-log', {});
+  }
 
   getTiles(): Observable<any> {
     const headers = this.setHeaders();

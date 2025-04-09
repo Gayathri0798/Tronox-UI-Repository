@@ -50,6 +50,18 @@ app.get('/get-log', (req, res) => {
   });
 });
 
+// Clear log file endpoint
+app.post('/clear-log', (req, res) => {
+  fs.writeFile(logFilePath, '', 'utf8', (err) => {
+    if (err) {
+      console.error(' Error clearing log file:', err);
+      return res.status(500).json({ message: 'Failed to clear log file' });
+    }
+    console.log(' testStepsLog.txt cleared');
+    res.json({ message: 'Log file cleared successfully' });
+  });
+});
+
 // Login API to issue JWT token
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
