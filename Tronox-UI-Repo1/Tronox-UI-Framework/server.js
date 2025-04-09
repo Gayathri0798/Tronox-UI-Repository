@@ -149,7 +149,7 @@ app.get("/api/tiles", verifyToken, (req, res) => {
 let testScriptName = "";
 const logFilePath = './testStepsLog.txt';
 app.post("/testcase-exec", verifyToken, upload.single("file"), (req, res) => {
-  // fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
+  fs.writeFileSync(LOG_FILE_PATH, '', 'utf8');
   // lastReadPosition = 0;
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
