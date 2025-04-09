@@ -83,14 +83,6 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
     });
   }
    
-  // Polling logs
-  startPollingLogs() {
-    this.logInterval = setInterval(() => {
-      this.http.get('/get-logs', { responseType: 'text' }).subscribe(data => {
-        this.logs = data;
-      });
-    }, 3000);
-  }
   clearLogs(): void {
     this.tileService.clearLogFile().subscribe({
       next: () => {
@@ -138,8 +130,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
     this.isProcessing = true;
     this.terminalOutput = []; // clear logs
     this.terminalVisible = true;
-    // this.getLogs(); // initial log fetch
-    this.startPollingLogs();
+    this.getLogs(); // initial log fetch
 
     this.tileService.uploadAndFetchRealTimeRes(this.file, this.data?.tile?.appNamespec).subscribe({
       next: (chunk) => {
