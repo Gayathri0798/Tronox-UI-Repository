@@ -26,6 +26,7 @@ app.use("/documents", express.static(DOCUMENTS_FOLDER));
 app.use(cors());
 app.use(compression({ flush: zlibConstants.Z_SYNC_FLUSH }));
 app.use(bodyParser.json());
+fs.writeFileSync(logFilePath, "", "utf8"); // Clear on startup
 // Fix __dirname in ES Module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
