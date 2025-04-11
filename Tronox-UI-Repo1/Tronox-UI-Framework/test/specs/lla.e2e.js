@@ -1,10 +1,12 @@
 //const assert = require('assert');
 import assert from 'assert';
+let dataset = await import('../Data/Tronox/Physicalinventory.json', { assert: { type: 'json' } });
 import BasePage from "../../common.js"
 import fs from 'fs';
 const logFilePath = './testStepsLog.txt';
 fs.writeFileSync(logFilePath, "");
 const Base = new BasePage();
+dataset=dataset.default;
 describe('LLA whitelabel', () => {
 
   fs.writeFileSync(logFilePath, "", "utf8");
@@ -84,10 +86,10 @@ describe('LLA whitelabel', () => {
          await browser.pause(3000);
 
          const enteremail = await $('//*[@id="email"]');
-        await Base.waitForDisplayedAndSetValue(enteremail, "admin@llawhitelabel.com");
+        await Base.waitForDisplayedAndSetValue(enteremail, dataset.email);
 
         const entermobilenumber = await $('//*[@id="phone_number"]');
-        await Base.waitForDisplayedAndSetValue(entermobilenumber, "9384612696");
+        await Base.waitForDisplayedAndSetValue(entermobilenumber, dataset.mobile);
 
         await browser.pause(1000);
         await takeScreenshot('Adding personal information');
@@ -101,10 +103,10 @@ describe('LLA whitelabel', () => {
         await browser.pause(1000);
 
         const enterfirstname = await $('//*[@id="first_name"]');
-        await Base.waitForDisplayedAndSetValue(enterfirstname, "rahul");
+        await Base.waitForDisplayedAndSetValue(enterfirstname, dataset.firstname);
 
         const enterlastname = await $('//*[@id="last_name"]');
-        await Base.waitForDisplayedAndSetValue(enterlastname, "sharma");
+        await Base.waitForDisplayedAndSetValue(enterlastname, dataset.lastname);
         await takeScreenshot('Entering personal information 1');
         const submit3element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/app-checkout-personal-info/div[1]/app-dynamic-form/div/app-button/div/button');
 
@@ -115,13 +117,13 @@ describe('LLA whitelabel', () => {
         await browser.pause(1000);
 
         const enteraddress1 = await $('//*[@id="address_1"]');
-        await Base.waitForDisplayedAndSetValue(enteraddress1, "no:233, peter street");
+        await Base.waitForDisplayedAndSetValue(enteraddress1, dataset.address1);
 
         const enteraddress2 = await $('//*[@id="address_2"]');
-        await Base.waitForDisplayedAndSetValue(enteraddress2, "tambaram mainroad");
+        await Base.waitForDisplayedAndSetValue(enteraddress2, dataset.address2);
 
         const enterpincode = await $('//*[@id="postal_code"]');
-        await Base.waitForDisplayedAndSetValue(enterpincode, "600100");
+        await Base.waitForDisplayedAndSetValue(enterpincode, dataset.pincode);
         await browser.pause(1000);
         await takeScreenshot('Entering billing information 1');
 
