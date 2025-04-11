@@ -60,7 +60,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
   ) {}
   ngOnInit(): void {
     // Display the logs every 10 seconds
-    this.logInterval = setInterval(() => this.getLogs(), 10000);
+    this.logInterval = setInterval(() => this.getLogs(), 3000);
   }
 
   ngOnDestroy(): void {
