@@ -21,7 +21,7 @@ export const config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/Tronox_MTS.e2e.js'
+        './test/specs/**/lla.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -50,10 +50,11 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'MicrosoftEdge',
-        'ms:edgeOptions': {
-            args: ['--disable-popup-blocking', '--no-sandbox','--headless']
-        }
+        // browserName: 'MicrosoftEdge',
+        // 'ms:edgeOptions': {
+        //     args: ['--disable-popup-blocking', '--no-sandbox','--headless']
+        // }
+        browserName: 'chrome'
     }],
  
     //

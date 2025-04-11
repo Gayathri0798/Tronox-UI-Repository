@@ -27,6 +27,11 @@
         "baseUrl": "https://tronox.okta.com/",
         "appName": "Tronox",
         "appNamespec": "Tronox_04_STP_IM_GIToCostCenter.e2e"
+    },
+    "Google_Search": {
+        "baseUrl": "https://www.google.com",
+        "appName": "lla",
+        "appNamespec": "lla.e2e"
     }
     
 }
