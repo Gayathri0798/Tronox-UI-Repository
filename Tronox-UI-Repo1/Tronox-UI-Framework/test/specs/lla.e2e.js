@@ -98,7 +98,48 @@ describe('LLA whitelabel', () => {
         const submit2Element = await $('//*[@id="shopping_cart_1"]/div/div[2]/div[2]/cms-order-summary/app-order-summary/div/div[3]/app-button/div/button');
         await submit2Element.click();
 
+        await browser.pause(1000);
+
+        const enterfirstname = await $('//*[@id="first_name"]');
+        await Base.waitForDisplayedAndSetValue(enterfirstname, "rahul");
+
+        const enterlastname = await $('//*[@id="last_name"]');
+        await Base.waitForDisplayedAndSetValue(enterlastname, "sharma");
+        await takeScreenshot('Entering personal information 1');
+        const submit3element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/app-checkout-personal-info/div[1]/app-dynamic-form/div/app-button/div/button');
+
+        await submit3element.scrollIntoView();
+        await takeScreenshot('Entering personal information 2');
+        await submit3element.click();
+
+        await browser.pause(1000);
+
+        const enteraddress1 = await $('//*[@id="address_1"]');
+        await Base.waitForDisplayedAndSetValue(enteraddress1, "no:233, peter street");
+
+        const enteraddress2 = await $('//*[@id="address_2"]');
+        await Base.waitForDisplayedAndSetValue(enteraddress2, "tambaram mainroad");
+
+        const enterpincode = await $('//*[@id="postal_code"]');
+        await Base.waitForDisplayedAndSetValue(enterpincode, "600100");
+        await browser.pause(1000);
+        await takeScreenshot('Entering billing information 1');
+
+        const submit4element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/ng-component/div[2]/app-dynamic-form/div/app-button/div/button');
+
+        await submit4element.scrollIntoView();
         await browser.pause(2000);
+        await takeScreenshot('Entering billing information 2');
+        await submit4element.click();
+        await browser.pause(4000);
+        const scrollelement1 = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/div/div[3]/span');
+
+        await scrollelement1.scrollIntoView();
+        await takeScreenshot('payment page');
+
+
+
+        
 
 
 
