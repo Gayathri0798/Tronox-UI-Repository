@@ -1,10 +1,12 @@
 <mat-dialog-content class="dialog-content">
   <!-- Logo at the top-center of the dialog -->
+  <div class="dialog-header">
   <div class="dialog-logo">
     <img src="assets/tronox_logo.png" alt="Logo" />
   </div>
-
+  </div>
   <!-- File Upload + Buttons (Side by Side) -->
+  <div class="scrollable-content">
   <div class="input-actions-container">
     <div>
       <p mat-dialog-title class="dialog-title">
@@ -115,4 +117,5 @@
   <ng-template #noResults>
     <p class="no-results" *ngIf="!hasResults">No results found.</p>
   </ng-template>
+  </div>
 </mat-dialog-content>

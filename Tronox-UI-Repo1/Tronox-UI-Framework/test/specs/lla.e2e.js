@@ -68,6 +68,7 @@ describe('LLA whitelabel', () => {
         await browser.pause(6000); // Optional: wait for page to load
         console.log(4);
         await takeScreenshot('LLA whitelabel home page loaded');
+        logStepToFile('LLA whitelabel home page loaded')
         console.log(5);
         // Accept cookies if present (Google may show a prompt)
          const homeliving = await $('/html/body/app-root/div[1]/app-main-menu/nav/div/ul/li[3]/a');
@@ -75,6 +76,7 @@ describe('LLA whitelabel', () => {
              await homeliving.click();
              await browser.pause(4000);
              await takeScreenshot('Navigated to Home & Living page');
+             logStepToFile('Navigated to Home & Living page')
        //  }
        const dashboardElement = await $(`//*[@id="product_plp_3"]/cms-product-card-group/div/div[1]/app-plan-card/div/div/app-button/div/button`);
 
@@ -82,6 +84,7 @@ describe('LLA whitelabel', () => {
         // await Base.waitForDisplayedAndClick(dashboardElement, 5000);
          await browser.pause(1000);
          await takeScreenshot('Adding atmosphere drive to cart');
+         logStepToFile('Adding atmosphere drive to cart');
          await dashboardElement.click();
          await browser.pause(3000);
 
@@ -93,10 +96,12 @@ describe('LLA whitelabel', () => {
 
         await browser.pause(1000);
         await takeScreenshot('Adding personal information');
+        logStepToFile('Adding personal information');
         const submit1Element = await $('//*[@id="mat-mdc-dialog-0"]/div/div/mat-dialog-content/personal-detail-form/app-dynamic-flexi-form-page/div/div/div/app-dynamic-form/div/app-button/div/button');
         await submit1Element.click();
         await browser.pause(1000);
         await takeScreenshot('order summary page loaded');
+        logStepToFile('order summary page loaded');
         const submit2Element = await $('//*[@id="shopping_cart_1"]/div/div[2]/div[2]/cms-order-summary/app-order-summary/div/div[3]/app-button/div/button');
         await submit2Element.click();
 
@@ -108,10 +113,12 @@ describe('LLA whitelabel', () => {
         const enterlastname = await $('//*[@id="last_name"]');
         await Base.waitForDisplayedAndSetValue(enterlastname, dataset.lastname);
         await takeScreenshot('Entering personal information 1');
+        logStepToFile('Entering personal information 1');
         const submit3element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/app-checkout-personal-info/div[1]/app-dynamic-form/div/app-button/div/button');
 
         await submit3element.scrollIntoView();
         await takeScreenshot('Entering personal information 2');
+        logStepToFile('Entering personal information 2');
         await submit3element.click();
 
         await browser.pause(1000);
@@ -126,18 +133,21 @@ describe('LLA whitelabel', () => {
         await Base.waitForDisplayedAndSetValue(enterpincode, dataset.pincode);
         await browser.pause(1000);
         await takeScreenshot('Entering billing information 1');
+        logStepToFile('Entering billing information 1');
 
         const submit4element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/ng-component/div[2]/app-dynamic-form/div/app-button/div/button');
 
         await submit4element.scrollIntoView();
         await browser.pause(2000);
         await takeScreenshot('Entering billing information 2');
+        logStepToFile('Entering billing information 2');
         await submit4element.click();
         await browser.pause(4000);
         const scrollelement1 = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/div/div[3]/span');
 
         await scrollelement1.scrollIntoView();
         await takeScreenshot('payment page');
+        logStepToFile('payment page');
 
 
 

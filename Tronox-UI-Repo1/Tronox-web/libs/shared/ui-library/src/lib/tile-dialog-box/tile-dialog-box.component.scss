@@ -1,6 +1,6 @@
 ::ng-deep .mat-dialog-container {
   width: 600px;
-  min-height: 400px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,11 +12,45 @@
   position: relative;
 }
 
-.dialog-logo {
-  width: 100%;
+::ng-deep .mat-mdc-dialog-surface {
+  position: absolute !important;
+  height: 90% !important;
+}
+
+::ng-deep .mat-dialog-content {
+  padding: 0 !important;
+  overflow: hidden !important; /* Disable Angular Material's scrolling */
+}
+
+.dialog-content {
+  display: contents;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  padding: 0px 0;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: center;
-  margin-bottom: 15px;
+  align-items: center;
+}
+
+.dialog-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .dialog-logo img {
@@ -67,15 +101,16 @@
 .button-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: auto;
+  gap: 10px;
+  margin: 10px 0 0 0;
+  padding-bottom: 10px;
   width: 100%;
   align-items: center;
 }
 
 button {
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 6px 12px;
+  font-size: 13px;
 }
 
 mat-spinner {
