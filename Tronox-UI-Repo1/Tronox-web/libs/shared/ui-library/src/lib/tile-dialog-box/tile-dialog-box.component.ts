@@ -69,7 +69,7 @@ export class TileDialogBoxComponent implements AfterViewChecked, OnInit, OnDestr
 
   // Helps to display the logs
   getLogs(): void {
-    this.http.get('http://34.93.231.170:3000/get-log', { responseType: 'text' }).subscribe({
+    this.http.get('http://35.244.54.64:3000/get-log', { responseType: 'text' }).subscribe({
       next: (data: string) => {
         this.terminalOutput = data.split('\n').filter(line => line.trim() !== '');
         setTimeout(() => {

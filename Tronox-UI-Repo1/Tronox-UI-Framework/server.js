@@ -549,7 +549,7 @@ app.post("/testcase-results", verifyToken, async (req, res) => {
     testResults.map(async (test) => {
       const docFileName = `${test.Testname.replace(/\s+/g, "_")}.docx`;
       const docFilePath = path.join(DOCUMENTS_FOLDER, docFileName);
-      const docDownloadURL = `http://34.93.231.170:${port}/documents/${docFileName}`;
+      const docDownloadURL = `http://35.244.54.64:${port}/documents/${docFileName}`;
       const currentDateTime = new Date().toLocaleString("en-US", { timeZone: "America/Chicago" });
       console.log(currentDateTime + " " + test.status + " " + test.error);
       console.log(testScriptName);

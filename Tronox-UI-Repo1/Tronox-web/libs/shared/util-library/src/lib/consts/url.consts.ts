@@ -1,4 +1,4 @@
-export const EXPRESS_BASE_URL = 'http://34.93.231.170:3000'; //To be made Dynamic through env
+export const EXPRESS_BASE_URL = 'http://35.244.54.64:3000'; //To be made Dynamic through env
 export const GET_TILES = `${EXPRESS_BASE_URL}/api/tiles`;
 export const UPLOAD_EXCEL = `${EXPRESS_BASE_URL}/uploadnew`;
 export const LOGIN = `${EXPRESS_BASE_URL}/login`;

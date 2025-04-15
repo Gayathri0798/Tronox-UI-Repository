@@ -16,15 +16,15 @@ export class TileService {
   constructor(private http: HttpClient) {}
 
   getLogUpdates() {
-    return this.http.get('http://34.93.231.170:3000/get-log-updates', {
+    return this.http.get('http://35.244.54.64:3000/get-log-updates', {
       responseType: 'text'
     });
   }
   getLogs() {
-    return this.http.get('http://34.93.231.170:3000/get-log', { responseType: 'text' });
+    return this.http.get('http://35.244.54.64:3000/get-log', { responseType: 'text' });
   }
   clearLogFile(): Observable<any> {
-    return this.http.post('http://34.93.231.170:3000/clear-log', {});
+    return this.http.post('http://35.244.54.64:3000/clear-log', {});
   }
 
   getTiles(): Observable<any> {
