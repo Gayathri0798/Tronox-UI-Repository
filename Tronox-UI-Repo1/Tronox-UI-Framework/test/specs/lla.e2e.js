@@ -118,7 +118,7 @@ describe('LLA whitelabel', () => {
 
         await submit3element.scrollIntoView();
         await takeScreenshot('Entering personal information 2');
-        logStepToFile('Entered into order summary page');
+        logStepToFile('Shopping cart item confirmation');
         await submit3element.click();
 
         await browser.pause(1000);
