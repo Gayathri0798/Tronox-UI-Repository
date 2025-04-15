@@ -50,11 +50,11 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        // browserName: 'MicrosoftEdge',
-        // 'ms:edgeOptions': {
-        //     args: ['--disable-popup-blocking', '--no-sandbox','--headless']
-        // }
-        browserName: 'chrome'
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
+            args: ['--disable-popup-blocking', '--no-sandbox','--headless']
+        }
+        // browserName: 'chrome'
     }],
  
     //
