@@ -113,12 +113,12 @@ describe('LLA whitelabel', () => {
         const enterlastname = await $('//*[@id="last_name"]');
         await Base.waitForDisplayedAndSetValue(enterlastname, dataset.lastname);
         await takeScreenshot('Entering personal information 1');
-        logStepToFile('Entering personal information 1');
+        logStepToFile('Entering personal information');
         const submit3element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/app-checkout-personal-info/div[1]/app-dynamic-form/div/app-button/div/button');
 
         await submit3element.scrollIntoView();
         await takeScreenshot('Entering personal information 2');
-        logStepToFile('Entering personal information 2');
+        logStepToFile('Entered into order summary page');
         await submit3element.click();
 
         await browser.pause(1000);
@@ -133,14 +133,14 @@ describe('LLA whitelabel', () => {
         await Base.waitForDisplayedAndSetValue(enterpincode, dataset.pincode);
         await browser.pause(1000);
         await takeScreenshot('Entering billing information 1');
-        logStepToFile('Entering billing information 1');
+        logStepToFile('Proceed to checkout');
 
         const submit4element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/ng-component/div[2]/app-dynamic-form/div/app-button/div/button');
 
         await submit4element.scrollIntoView();
         await browser.pause(2000);
         await takeScreenshot('Entering billing information 2');
-        logStepToFile('Entering billing information 2');
+        logStepToFile('Billing address confirmation page');
         await submit4element.click();
         await browser.pause(4000);
         const scrollelement1 = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/div/div[3]/span');
