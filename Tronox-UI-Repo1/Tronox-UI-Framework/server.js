@@ -18,6 +18,7 @@ const app = express();
 const port = 3000;
 const DOCUMENTS_FOLDER = "./documents";
 const resultsFilePath = "testResults.json";
+const eventsFilePath = './userEvents.json';
 if (!fs.existsSync(DOCUMENTS_FOLDER)) {
   fs.mkdirSync(DOCUMENTS_FOLDER);
 }
@@ -61,6 +62,21 @@ app.post('/clear-log', (req, res) => {
     console.log(' testStepsLog.txt cleared');
     res.json({ message: 'Log file cleared successfully' });
   });
+});
+
+// Api to capture xpath:
+app.post('/log-event', (req, res) => {
+  const event = req.body;
+
+  let events = [];
+  if (fs.existsSync(eventsFilePath)) {
+    events = JSON.parse(fs.readFileSync(eventsFilePath));
+  }
+
+  events.push(event);
+
+  fs.writeFileSync(eventsFilePath, JSON.stringify(events, null, 2));
+  res.status(200).json({ message: 'Event logged successfully' });
 });
 
 // Login API to issue JWT token

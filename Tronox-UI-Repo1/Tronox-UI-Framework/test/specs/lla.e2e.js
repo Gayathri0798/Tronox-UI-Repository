@@ -3,8 +3,12 @@ import assert from 'assert';
 let dataset = await import('../Data/Tronox/Physicalinventory.json', { assert: { type: 'json' } });
 import BasePage from "../../common.js"
 import fs from 'fs';
+import axios from 'axios'
 const logFilePath = './testStepsLog.txt';
+const eventLogFilePath = './userEvents.json';
+fs.writeFileSync(eventLogFilePath, "");
 fs.writeFileSync(logFilePath, "");
+const userEvents = [];
 const Base = new BasePage();
 dataset=dataset.default;
 describe('LLA whitelabel', () => {
@@ -31,7 +35,21 @@ describe('LLA whitelabel', () => {
        const timestamp = new Date().toISOString();
        fs.appendFileSync(logFilePath, `${timestamp} - ${stepMessage}\n`);
    };
-   
+  // code for xpath
+  // Log user events to a JSON file
+  const logEventToServer = (xpath, eventType, value = null) => {
+    const eventLog = {
+      xpath,
+      eventType,
+      value,
+      timestamp: new Date().toISOString()
+    };
+    userEvents.push(eventLog);
+  };
+  
+  // After the test finishes (in `after()` or `finally`)
+  fs.writeFileSync(eventLogFilePath, JSON.stringify(userEvents, null, 2));
+  // code for xpath end
    after(async () => {
      fs.writeFileSync('./testResults.json', JSON.stringify(testResults, null, 2));
    });
@@ -74,6 +92,7 @@ describe('LLA whitelabel', () => {
          const homeliving = await $('/html/body/app-root/div[1]/app-main-menu/nav/div/ul/li[3]/a');
       //   if (await homeliving.isExisting()) {
              await homeliving.click();
+             await logEventToServer('/html/body/app-root/div[1]/app-main-menu/nav/div/ul/li[3]/a', 'click');
              await browser.pause(4000);
              await takeScreenshot('Navigated to Home & Living page');
              logStepToFile('Navigated to Home & Living page')
@@ -81,6 +100,10 @@ describe('LLA whitelabel', () => {
        const dashboardElement = await $(`//*[@id="product_plp_3"]/cms-product-card-group/div/div[1]/app-plan-card/div/div/app-button/div/button`);
 
          await dashboardElement.scrollIntoView();
+         await logEventToServer(
+          '//*[@id="product_plp_3"]/cms-product-card-group/div/div[1]/app-plan-card/div/div/app-button/div/button',
+          'scrollIntoView'
+        );
         // await Base.waitForDisplayedAndClick(dashboardElement, 5000);
          await browser.pause(1000);
          await takeScreenshot('Adding atmosphere drive to cart');
@@ -90,28 +113,34 @@ describe('LLA whitelabel', () => {
 
          const enteremail = await $('//*[@id="email"]');
         await Base.waitForDisplayedAndSetValue(enteremail, dataset.email);
+        await logEventToServer('//*[@id="email"]', 'type', dataset.email);
 
         const entermobilenumber = await $('//*[@id="phone_number"]');
         await Base.waitForDisplayedAndSetValue(entermobilenumber, dataset.mobile);
+        await logEventToServer('//*[@id="phone_number"]', 'type', dataset.mobile);
 
         await browser.pause(1000);
         await takeScreenshot('Adding personal information');
         logStepToFile('Adding personal information');
         const submit1Element = await $('//*[@id="mat-mdc-dialog-0"]/div/div/mat-dialog-content/personal-detail-form/app-dynamic-flexi-form-page/div/div/div/app-dynamic-form/div/app-button/div/button');
         await submit1Element.click();
+        await logEventToServer('//*[@id="mat-mdc-dialog-0"]/div/div/mat-dialog-content/personal-detail-form/app-dynamic-flexi-form-page/div/div/div/app-dynamic-form/div/app-button/div/button', 'click');
         await browser.pause(1000);
         await takeScreenshot('order summary page loaded');
         logStepToFile('order summary page loaded');
         const submit2Element = await $('//*[@id="shopping_cart_1"]/div/div[2]/div[2]/cms-order-summary/app-order-summary/div/div[3]/app-button/div/button');
         await submit2Element.click();
+        await logEventToServer('//*[@id="shopping_cart_1"]/div/div[2]/div[2]/cms-order-summary/app-order-summary/div/div[3]/app-button/div/button', 'click');
 
         await browser.pause(1000);
 
         const enterfirstname = await $('//*[@id="first_name"]');
         await Base.waitForDisplayedAndSetValue(enterfirstname, dataset.firstname);
+        await logEventToServer('//*[@id="first_name"]', 'type', dataset.firstname);
 
         const enterlastname = await $('//*[@id="last_name"]');
         await Base.waitForDisplayedAndSetValue(enterlastname, dataset.lastname);
+        await logEventToServer('//*[@id="last_name"]', 'type', dataset.lastname);
         await takeScreenshot('Entering personal information 1');
         logStepToFile('Entering personal information');
         const submit3element = await $('/html/body/app-root/section/app-checkout-flow/div/div/app-checkout-progress/div/div/div/div[1]/app-checkout-personal-info/div[1]/app-dynamic-form/div/app-button/div/button');
