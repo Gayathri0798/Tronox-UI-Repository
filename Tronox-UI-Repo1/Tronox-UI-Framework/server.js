@@ -686,7 +686,7 @@ app.post("/testcase-results", verifyToken, async (req, res) => {
 //  Code end Gayatri
  
 // Start the server
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });;
  
