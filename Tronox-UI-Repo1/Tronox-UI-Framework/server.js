@@ -16,6 +16,7 @@ import { constants as zlibConstants } from 'zlib';
  
 const app = express();
 const port = 3000;
+const HOST = '0.0.0.0';
 const DOCUMENTS_FOLDER = "./documents";
 const resultsFilePath = "testResults.json";
 const eventsFilePath = './userEvents.json';
@@ -685,7 +686,7 @@ app.post("/testcase-results", verifyToken, async (req, res) => {
 //  Code end Gayatri
  
 // Start the server
-app.listen(port, () => {
-  console.log(`Server running at http://20.40.46.20:${port}`);
+app.listen(PORT, HOST, () => {
+  console.log(`Server running at http://${HOST}:${PORT}`);
 });
  
