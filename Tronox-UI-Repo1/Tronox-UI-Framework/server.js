@@ -687,6 +687,6 @@ app.post("/testcase-results", verifyToken, async (req, res) => {
  
 // Start the server
 app.listen(PORT, HOST, () => {
-  console.log(`Server running at http://${HOST}:${PORT}`);
+  console.log(`Server running at http://${HOST}:${port}`);
 });
  
