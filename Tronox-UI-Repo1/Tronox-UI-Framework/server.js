@@ -16,7 +16,7 @@ import { constants as zlibConstants } from 'zlib';
  
 const app = express();
 const port = 3000;
-const HOST = '20.40.46.20';
+const HOST = '20.197.43.163';
 const DOCUMENTS_FOLDER = "./documents";
 const resultsFilePath = "testResults.json";
 const eventsFilePath = './userEvents.json';
